@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
+<html lang="es"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Atlas de William — Orden del Sapo Saltarín</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&amp;family=IM+Fell+English+SC&amp;family=Cinzel+Decorative:wght@400;700&amp;family=Cinzel:wght@400;600;700&amp;family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
   :root {
@@ -1184,7 +1182,7 @@
   }
 </style>
 </head>
-<body>
+<body class="">
 <div id="app">
 
   <!-- ─── HEADER ─── -->
@@ -1201,12 +1199,12 @@
       <button class="nav-tab" onclick="showSection('log',this)">Bitácora</button>
       <button class="nav-tab" onclick="showSection('archive',this)">Archivo William</button>
       <button class="nav-tab" onclick="showSection('characters',this)">La Orden</button>
-      <button class="nav-tab admin-lock-btn" id="admin-btn" onclick="toggleAdmin()" title="Modo Administrador">🔒</button>
+      <button class="nav-tab admin-lock-btn unlocked" id="admin-btn" onclick="toggleAdmin()" title="Modo Administrador">🔓</button>
     </nav>
   </header>
 
   <!-- ─── ADMIN BAR ─── -->
-  <div id="admin-bar">
+  <div id="admin-bar" class="visible">
     <span class="admin-bar-label">⚙ Admin</span>
     <button class="admin-btn" onclick="openAdminNewLocation()">+ Localización</button>
     <button class="admin-btn" onclick="openAdminRouteEditor()">✦ Rutas</button>
@@ -1225,20 +1223,55 @@
     <!-- MAP -->
     <div id="section-map" class="section active">
       <div id="map-container">
-        <div id="map"></div>
+        <div id="map" class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0" style="position: relative;"><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(-36px, -161px, 0px);"><div class="leaflet-pane leaflet-tile-pane" style="filter: sepia(0.85) saturate(0.5) brightness(0.82) contrast(1.1) hue-rotate(-8deg);"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 17; transform: translate3d(-542px, -228px, 0px) scale(2);"></div><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 18; transform: translate3d(-542px, -228px, 0px) scale(1);"><img alt="" src="https://tile.openstreetmap.org/7/62/39.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1292px, 496px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/62/38.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1292px, 240px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/61/39.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1036px, 496px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/63/39.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1548px, 496px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/62/40.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1292px, 752px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/61/38.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1036px, 240px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/63/38.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1548px, 240px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/61/40.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1036px, 752px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/63/40.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1548px, 752px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/62/37.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1292px, -16px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/60/39.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(780px, 496px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/64/39.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1804px, 496px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/62/41.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1292px, 1008px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/61/37.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1036px, -16px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/63/37.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1548px, -16px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/60/38.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(780px, 240px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/64/38.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1804px, 240px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/60/40.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(780px, 752px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/64/40.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1804px, 752px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/61/41.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1036px, 1008px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/63/41.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1548px, 1008px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/60/37.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(780px, -16px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/64/37.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1804px, -16px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/60/41.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(780px, 1008px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/64/41.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1804px, 1008px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/59/39.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(524px, 496px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/65/39.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(2060px, 496px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/59/38.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(524px, 240px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/65/38.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(2060px, 240px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/59/40.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(524px, 752px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/65/40.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(2060px, 752px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/59/37.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(524px, -16px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/65/37.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(2060px, -16px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/59/41.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(524px, 1008px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/65/41.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(2060px, 1008px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/58/39.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(268px, 496px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/58/38.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(268px, 240px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/58/40.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(268px, 752px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/58/37.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(268px, -16px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/58/41.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(268px, 1008px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/62/42.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1292px, 1264px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/61/42.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1036px, 1264px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/63/42.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1548px, 1264px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/60/42.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(780px, 1264px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/64/42.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1804px, 1264px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/59/42.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(524px, 1264px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/7/65/42.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(2060px, 1264px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-overlay-pane"><svg pointer-events="none" class="leaflet-zoom-animated" width="1877" height="1061" viewBox="-120 73 1877 1061" style="transform: translate3d(-120px, 73px, 0px);"><g><path class="leaflet-interactive" stroke="#b8860b" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8, 5" fill="none" d="M862 272L838 364L819 447L806 521L799 586L799 669L806 714L811 733L818 751L826 766L836 780L847 792L860 802L873 810L889 817L923 824L964 823L986 820L1035 809L1089 790"></path><path class="leaflet-interactive" stroke="#1a0e06" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#b8860b" fill-opacity="0.9" fill-rule="evenodd" d="M815,751a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0 "></path><path class="leaflet-interactive" stroke="#b8860b" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8, 5" fill="none" d="M1089 790L1020 829L958 858L904 876L857 884L837 884L819 882L803 877L788 870L776 860L765 847L757 832L750 814L746 794L743 771L742 745L743 717L751 652L767 575L791 487L822 386L862 272"></path><path class="leaflet-interactive" stroke="#1a0e06" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#b8860b" fill-opacity="0.9" fill-rule="evenodd" d="M754,832a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0 "></path><path class="leaflet-interactive" stroke="#b8860b" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8, 5" fill="none" d="M862 272L801 230L746 198L696 178L673 172L652 169L632 169L614 172L597 177L567 197L543 228L525 270L512 323L505 387L504 461L508 545L518 639L544 796"></path><path class="leaflet-interactive" stroke="#1a0e06" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#b8860b" fill-opacity="0.9" fill-rule="evenodd" d="M540,228a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0 "></path></g></svg></div><div class="leaflet-pane leaflet-shadow-pane"></div><div class="leaflet-pane leaflet-marker-pane"><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(862px, 272px, 0px); z-index: 272;">
+    <div class="marker-inner ">
+      <div class="marker-edit-badge">✥</div>
+      <div class="marker-icon">🏰</div>
+      <div class="marker-label">Hogwarts</div>
+    </div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(1089px, 790px, 0px); z-index: 790;">
+    <div class="marker-inner ">
+      <div class="marker-edit-badge">✥</div>
+      <div class="marker-icon">🗼</div>
+      <div class="marker-label">Torre del Viajero</div>
+    </div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(544px, 796px, 0px); z-index: 796;">
+    <div class="marker-inner ">
+      <div class="marker-edit-badge">✥</div>
+      <div class="marker-icon">🏘️</div>
+      <div class="marker-label">Blackroot</div>
+    </div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(406px, 943px, 0px); z-index: 943;">
+    <div class="marker-inner ">
+      <div class="marker-edit-badge">✥</div>
+      <div class="marker-icon">⛰️</div>
+      <div class="marker-label">Acantilados de Irlanda</div>
+    </div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(852px, 281px, 0px); z-index: 281;">
+    <div class="marker-inner ">
+      <div class="marker-edit-badge">✥</div>
+      <div class="marker-icon">🌲</div>
+      <div class="marker-label">Bosque Prohibido</div>
+    </div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(1471px, 1565px, 0px); z-index: 1565;">
+    <div class="marker-inner marker-unknown">
+      <div class="marker-edit-badge">✥</div>
+      <div class="marker-icon">❓</div>
+      <div class="marker-label">???</div>
+    </div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(3902px, 2570px, 0px); z-index: 2570;">
+    <div class="marker-inner marker-unknown">
+      <div class="marker-edit-badge">✥</div>
+      <div class="marker-icon">🔒</div>
+      <div class="marker-label">???</div>
+    </div></div></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(15940px, 10319px, 0px) scale(64);"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com" title="A JavaScript library for interactive maps"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" class="leaflet-attribution-flag"><path fill="#4C7BE1" d="M0 0h12v4H0z"></path><path fill="#FFD500" d="M0 4h12v3H0z"></path><path fill="#E0BC00" d="M0 7h12v1H0z"></path></svg> Leaflet</a> <span aria-hidden="true">|</span> © OpenStreetMap contributors</div></div></div></div>
 
         <!-- Compass SVG -->
         <svg id="compass" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="50" cy="50" r="46" fill="rgba(26,14,6,0.7)" stroke="#b8860b" stroke-width="2"/>
-          <circle cx="50" cy="50" r="38" fill="none" stroke="rgba(184,134,11,0.3)" stroke-width="1"/>
+          <circle cx="50" cy="50" r="46" fill="rgba(26,14,6,0.7)" stroke="#b8860b" stroke-width="2"></circle>
+          <circle cx="50" cy="50" r="38" fill="none" stroke="rgba(184,134,11,0.3)" stroke-width="1"></circle>
           <text x="50" y="16" font-family="Cinzel,serif" font-size="10" fill="#d4a017" text-anchor="middle" font-weight="bold">N</text>
           <text x="50" y="90" font-family="Cinzel,serif" font-size="10" fill="rgba(212,160,23,0.6)" text-anchor="middle">S</text>
           <text x="88" y="54" font-family="Cinzel,serif" font-size="10" fill="rgba(212,160,23,0.6)" text-anchor="middle">E</text>
           <text x="12" y="54" font-family="Cinzel,serif" font-size="10" fill="rgba(212,160,23,0.6)" text-anchor="middle">O</text>
-          <polygon points="50,22 46,50 50,46 54,50" fill="#d4a017"/>
-          <polygon points="50,78 46,50 50,54 54,50" fill="rgba(212,160,23,0.4)"/>
-          <circle cx="50" cy="50" r="4" fill="#d4a017"/>
-          <circle cx="50" cy="50" r="2" fill="#1a0e06"/>
+          <polygon points="50,22 46,50 50,46 54,50" fill="#d4a017"></polygon>
+          <polygon points="50,78 46,50 50,54 54,50" fill="rgba(212,160,23,0.4)"></polygon>
+          <circle cx="50" cy="50" r="4" fill="#d4a017"></circle>
+          <circle cx="50" cy="50" r="2" fill="#1a0e06"></circle>
         </svg>
 
         <!-- Controls -->
@@ -1317,448 +1350,578 @@
 
 const LOCATIONS = [
   {
-    id: 'hogwarts',
-    name: 'Hogwarts',
-    region: 'Tierras Altas de Escocia',
-    icon: '🏰',
-    lat: 57.3, lng: -4.4,
-    status: 'visitado',
-    history: 'Colegio Hogwarts de Magia y Hechicería. Punto de origen de la Orden del Sapo Saltarín. Entre sus muros nació la idea de continuar los viajes de William.',
-    members: ['Jude', 'Kenzo', 'Yuki', 'Godwig'],
-    events: ['Primer encuentro de la Orden', 'Formación del pacto del Sapo Saltarín', 'Consulta del Archivo de la Biblioteca'],
-    notes: 'La Biblioteca Restringida contiene referencias vagas a un "Viajero sin nombre" que visitó el castillo a mediados del siglo XIX.'
+    "id": "hogwarts",
+    "name": "Hogwarts",
+    "region": "Tierras Altas de Escocia",
+    "icon": "🏰",
+    "lat": 57.3,
+    "lng": -4.4,
+    "status": "visitado",
+    "history": "Colegio Hogwarts de Magia y Hechicería. Punto de origen de la Orden del Sapo Saltarín. Entre sus muros nació la idea de continuar los viajes de William.",
+    "members": [
+      "Jude",
+      "Kenzo",
+      "Yuki",
+      "Godwig"
+    ],
+    "events": [
+      "Primer encuentro de la Orden",
+      "Formación del pacto del Sapo Saltarín",
+      "Consulta del Archivo de la Biblioteca"
+    ],
+    "notes": "La Biblioteca Restringida contiene referencias vagas a un \"Viajero sin nombre\" que visitó el castillo a mediados del siglo XIX."
   },
   {
-    id: 'torre',
-    name: 'Torre del Viajero',
-    region: 'Páramos de Yorkshire',
-    icon: '🗼',
-    lat: 54.1, lng: -1.9,
-    status: 'visitado',
-    history: 'Torre abandonada descubierta por la Orden durante una tormenta. En la sala superior, perfectamente conservada, encontraron el legado de William: sus mapas, su diario y la primera carta.',
-    members: ['Jude', 'Kenzo', 'Yuki', 'Godwig'],
-    events: ['Descubrimiento de la sala de William', 'Hallazgo del Mapa del Mundo Mágico', 'Primera carta de William encontrada', 'Decisión de continuar los viajes'],
-    notes: 'La sala no tenía polvo. Como si alguien la hubiera conservado con magia. En el escritorio había tinta fresca en la pluma.'
+    "id": "torre",
+    "name": "Torre del Viajero",
+    "region": "Páramos de Yorkshire",
+    "icon": "🗼",
+    "lat": 54.1,
+    "lng": -1.9,
+    "status": "visitado",
+    "history": "Torre abandonada descubierta por la Orden durante una tormenta. En la sala superior, perfectamente conservada, encontraron el legado de William: sus mapas, su diario y la primera carta.",
+    "members": [
+      "Jude",
+      "Kenzo",
+      "Yuki",
+      "Godwig"
+    ],
+    "events": [
+      "Descubrimiento de la sala de William",
+      "Hallazgo del Mapa del Mundo Mágico",
+      "Primera carta de William encontrada",
+      "Decisión de continuar los viajes"
+    ],
+    "notes": "La sala no tenía polvo. Como si alguien la hubiera conservado con magia. En el escritorio había tinta fresca en la pluma."
   },
   {
-    id: 'blackroot',
-    name: 'Blackroot',
-    region: 'Condados del Oeste, Inglaterra',
-    icon: '🏘️',
-    lat: 52.4, lng: -2.1,
-    status: 'visitado',
-    history: 'Pequeño pueblo mágico oculto en los suburbios de los Midlands. Conocido entre viajeros por su mercado de reliquias y su antigua taberna, El Caldero Agrietado.',
-    members: ['Jude', 'Kenzo', 'Yuki', 'Godwig'],
-    events: ['Investigación de rumores sobre William', 'Encuentro con la comerciante Mira Ashfen', 'Pista sobre los Acantilados de Irlanda'],
-    notes: 'Varios lugareños recuerdan a un hombre de viaje llamado "El Recogedor". Nadie sabe su nombre. Mira Ashfen le vendió algo, pero no quiso decir qué.'
+    "id": "blackroot",
+    "name": "Blackroot",
+    "region": "Condados del Oeste, Inglaterra",
+    "icon": "🏘️",
+    "lat": 54.0594,
+    "lng": -7.8882,
+    "status": "visitado",
+    "history": "Pequeño pueblo mágico oculto en los suburbios de los Midlands. Conocido entre viajeros por su mercado de reliquias y su antigua taberna, El Caldero Agrietado.",
+    "members": [
+      "Jude",
+      "Kenzo",
+      "Yuki",
+      "Godwig"
+    ],
+    "events": [
+      "Investigación de rumores sobre William",
+      "Encuentro con la comerciante Mira Ashfen",
+      "Pista sobre los Acantilados de Irlanda"
+    ],
+    "notes": "Varios lugareños recuerdan a un hombre de viaje llamado \"El Recogedor\". Nadie sabe su nombre. Mira Ashfen le vendió algo, pero no quiso decir qué."
   },
   {
-    id: 'irlanda',
-    name: 'Acantilados de Irlanda',
-    region: 'Costa occidental de Irlanda',
-    icon: '⛰️',
-    lat: 53.1, lng: -9.4,
-    status: 'proximo',
-    history: 'Escarpados acantilados frente al Atlántico. Existe una cueva accesible únicamente durante la marea baja que los locales llaman "La Boca del Profundo". William pudo haber dejado algo allí.',
-    members: ['Jude', 'Kenzo', 'Yuki', 'Godwig'],
-    events: ['Próxima expedición de la Orden'],
-    notes: 'Mira Ashfen mencionó que William compró cuerdas encantadas, linternas de aguanieve y conservantes de pergamino. Todo compatible con exploración de cuevas húmedas.'
+    "id": "irlanda",
+    "name": "Acantilados de Irlanda",
+    "region": "Costa occidental de Irlanda",
+    "icon": "⛰️",
+    "lat": 53.1,
+    "lng": -9.4,
+    "status": "proximo",
+    "history": "Escarpados acantilados frente al Atlántico. Existe una cueva accesible únicamente durante la marea baja que los locales llaman \"La Boca del Profundo\". William pudo haber dejado algo allí.",
+    "members": [
+      "Jude",
+      "Kenzo",
+      "Yuki",
+      "Godwig"
+    ],
+    "events": [
+      "Próxima expedición de la Orden"
+    ],
+    "notes": "Mira Ashfen mencionó que William compró cuerdas encantadas, linternas de aguanieve y conservantes de pergamino. Todo compatible con exploración de cuevas húmedas."
   },
   {
-    id: 'bosque',
-    name: 'Bosque Prohibido',
-    region: 'Hogwarts, Escocia',
-    icon: '🌲',
-    lat: 57.25, lng: -4.5,
-    status: 'visitado',
-    history: 'El Bosque Prohibido, en los terrenos de Hogwarts. Nadie entra sin permiso. Sin embargo, en las notas de William aparece mencionado como "el primer umbral".',
-    members: ['Jude', 'Yuki'],
-    events: ['Incursión nocturna no autorizada', 'Hallazgo de marcas antiguas en los árboles', 'Encuentro con criatura no identificada'],
-    notes: 'Las marcas en los árboles coinciden con símbolos de los mapas de William. Son viejas. Muy viejas.'
+    "id": "bosque",
+    "name": "Bosque Prohibido",
+    "region": "Hogwarts, Escocia",
+    "icon": "🌲",
+    "lat": 57.25,
+    "lng": -4.5,
+    "status": "visitado",
+    "history": "El Bosque Prohibido, en los terrenos de Hogwarts. Nadie entra sin permiso. Sin embargo, en las notas de William aparece mencionado como \"el primer umbral\".",
+    "members": [
+      "Jude",
+      "Yuki"
+    ],
+    "events": [
+      "Incursión nocturna no autorizada",
+      "Hallazgo de marcas antiguas en los árboles",
+      "Encuentro con criatura no identificada"
+    ],
+    "notes": "Las marcas en los árboles coinciden con símbolos de los mapas de William. Son viejas. Muy viejas."
   },
   {
-    id: 'desconocido1',
-    name: '??? — Anotación Ilegible',
-    region: 'Ubicación no determinada',
-    icon: '❓',
-    lat: 48.8, lng: 2.3,
-    status: 'misterio',
-    history: 'Una mancha en el mapa de William. Las palabras alrededor están corroídas. Solo se pueden distinguir dos letras: "P" y "R".',
-    members: [],
-    events: [],
-    notes: 'El mapa parece dañado deliberadamente en este punto.'
+    "id": "desconocido1",
+    "name": "??? — Anotación Ilegible",
+    "region": "Ubicación no determinada",
+    "icon": "❓",
+    "lat": 48.8,
+    "lng": 2.3,
+    "status": "misterio",
+    "history": "Una mancha en el mapa de William. Las palabras alrededor están corroídas. Solo se pueden distinguir dos letras: \"P\" y \"R\".",
+    "members": [],
+    "events": [],
+    "notes": "El mapa parece dañado deliberadamente en este punto."
   },
   {
-    id: 'desconocido2',
-    name: '??? — Mapa Dañado',
-    region: 'Región Oriental Desconocida',
-    icon: '🔒',
-    lat: 41.0, lng: 29.0,
-    status: 'misterio',
-    history: 'Una sección del mapa de William ha sido arrancada. Lo que queda muestra solo fragmentos de costa y algo que podría ser un faro.',
-    members: [],
-    events: [],
-    notes: 'Las páginas fueron arrancadas. No por el tiempo. Con cuidado. Con intención.'
+    "id": "desconocido2",
+    "name": "??? — Mapa Dañado",
+    "region": "Región Oriental Desconocida",
+    "icon": "🔒",
+    "lat": 41,
+    "lng": 29,
+    "status": "misterio",
+    "history": "Una sección del mapa de William ha sido arrancada. Lo que queda muestra solo fragmentos de costa y algo que podría ser un faro.",
+    "members": [],
+    "events": [],
+    "notes": "Las páginas fueron arrancadas. No por el tiempo. Con cuidado. Con intención."
   }
 ];
 
 const ROUTES = [
   {
-    id: 'ruta1',
-    name: 'Viaje a la Torre y Blackroot',
-    color: '#b8860b',
-    stops: ['hogwarts', 'torre', 'hogwarts', 'blackroot']
+    "id": "ruta1",
+    "name": "Viaje a la Torre y Blackroot",
+    "color": "#b8860b",
+    "stops": [
+      "hogwarts",
+      "torre",
+      "hogwarts",
+      "blackroot"
+    ]
   }
 ];
 
 const EXPEDITIONS = [
   {
-    number: 'I',
-    title: 'Investigando los Rumores I',
-    emoji: '📚',
-    members: [
-      { name: 'Jude Bellingham', url: 'https://hpc.forumcommunity.net/?t=63456048' },
-      { name: 'Yuki Cho', url: 'https://hpc.forumcommunity.net/?t=63455116' },
-      { name: 'Godwig DeMettrie', url: 'https://hpc.forumcommunity.net/?t=63454715' }
+    "number": "I",
+    "title": "Investigando los Rumores I",
+    "emoji": "📚",
+    "members": [
+      {
+        "name": "Jude Bellingham",
+        "url": "https://hpc.forumcommunity.net/?t=63456048"
+      },
+      {
+        "name": "Yuki Cho",
+        "url": "https://hpc.forumcommunity.net/?t=63455116"
+      },
+      {
+        "name": "Godwig DeMettrie",
+        "url": "https://hpc.forumcommunity.net/?t=63454715"
+      }
     ],
-    summary: 'La Orden se reunió en la biblioteca para comentar los rumores que azotaban Hogwarts en su primer año, relativos a la bibliotecaria. Se pusieron en común teorías que habían escuchado y presenciado.',
-    conclusion: 'Tras deliberar, los miembros del grupo llegaron a una idea conjunta sobre la naturaleza de la bibliotecaria.'
+    "summary": "La Orden se reunió en la biblioteca para comentar los rumores que azotaban Hogwarts en su primer año, relativos a la bibliotecaria. Se pusieron en común teorías que habían escuchado y presenciado.",
+    "conclusion": "Tras deliberar, los miembros del grupo llegaron a una idea conjunta sobre la naturaleza de la bibliotecaria."
   },
   {
-    number: 'II',
-    title: 'Investigando los Rumores II',
-    emoji: '🔍',
-    members: [
-      { name: 'Jude Bellingham', url: 'https://hpc.forumcommunity.net/?t=63456048' },
-      { name: 'Yuki Cho', url: 'https://hpc.forumcommunity.net/?t=63455116' },
-      { name: 'Godwig DeMettrie', url: 'https://hpc.forumcommunity.net/?t=63454715' }
+    "number": "II",
+    "title": "Investigando los Rumores II",
+    "emoji": "🔍",
+    "members": [
+      {
+        "name": "Jude Bellingham",
+        "url": "https://hpc.forumcommunity.net/?t=63456048"
+      },
+      {
+        "name": "Yuki Cho",
+        "url": "https://hpc.forumcommunity.net/?t=63455116"
+      },
+      {
+        "name": "Godwig DeMettrie",
+        "url": "https://hpc.forumcommunity.net/?t=63454715"
+      }
     ],
-    summary: 'Tras la primera sesión, la Orden alcanzó un acuerdo: la bibliotecaria era algún tipo de híbrido. Recurrieron a la Biblioteca de Hogwarts para buscar información sobre criaturas de esa naturaleza.',
-    conclusion: 'Investigación bibliográfica completada. Las conclusiones reforzaron la teoría del híbrido.'
+    "summary": "Tras la primera sesión, la Orden alcanzó un acuerdo: la bibliotecaria era algún tipo de híbrido. Recurrieron a la Biblioteca de Hogwarts para buscar información sobre criaturas de esa naturaleza.",
+    "conclusion": "Investigación bibliográfica completada. Las conclusiones reforzaron la teoría del híbrido."
   },
   {
-    number: 'III',
-    title: 'Preparativos para el Peligro',
-    emoji: '⚔️',
-    members: [
-      { name: 'Jude Bellingham', url: 'https://hpc.forumcommunity.net/?t=63456048' },
-      { name: 'Yuki Cho', url: 'https://hpc.forumcommunity.net/?t=63455116' },
-      { name: 'Kenzo Kylaeris', url: 'https://hpc.forumcommunity.net/?t=63455995' },
-      { name: 'Godwig DeMettrie', url: 'https://hpc.forumcommunity.net/?t=63454715' }
+    "number": "III",
+    "title": "Preparativos para el Peligro",
+    "emoji": "⚔️",
+    "members": [
+      {
+        "name": "Jude Bellingham",
+        "url": "https://hpc.forumcommunity.net/?t=63456048"
+      },
+      {
+        "name": "Yuki Cho",
+        "url": "https://hpc.forumcommunity.net/?t=63455116"
+      },
+      {
+        "name": "Kenzo Kylaeris",
+        "url": "https://hpc.forumcommunity.net/?t=63455995"
+      },
+      {
+        "name": "Godwig DeMettrie",
+        "url": "https://hpc.forumcommunity.net/?t=63454715"
+      }
     ],
-    summary: 'La Orden al completo se reunió para tratar cómo prepararse ante el peligro que se les avecinaba, provocado por la larga conversación mantenida previamente con Riya Kapoor.',
-    conclusion: 'Se establecieron planes de preparación y se acordaron medidas de precaución para los miembros de la Orden.'
+    "summary": "La Orden al completo se reunió para tratar cómo prepararse ante el peligro que se les avecinaba, provocado por la larga conversación mantenida previamente con Riya Kapoor.",
+    "conclusion": "Se establecieron planes de preparación y se acordaron medidas de precaución para los miembros de la Orden."
   },
   {
-    number: 'IV',
-    title: 'Sigilo de Alto Nivel...',
-    emoji: '🙈',
-    members: [
-      { name: 'Jude Bellingham', url: 'https://hpc.forumcommunity.net/?t=63456048' },
-      { name: 'Yuki Cho', url: 'https://hpc.forumcommunity.net/?t=63455116' },
-      { name: 'Kenzo Kylaeris', url: 'https://hpc.forumcommunity.net/?t=63455995' },
-      { name: 'Godwig DeMettrie', url: 'https://hpc.forumcommunity.net/?t=63454715' }
+    "number": "IV",
+    "title": "Sigilo de Alto Nivel...",
+    "emoji": "🙈",
+    "members": [
+      {
+        "name": "Jude Bellingham",
+        "url": "https://hpc.forumcommunity.net/?t=63456048"
+      },
+      {
+        "name": "Yuki Cho",
+        "url": "https://hpc.forumcommunity.net/?t=63455116"
+      },
+      {
+        "name": "Kenzo Kylaeris",
+        "url": "https://hpc.forumcommunity.net/?t=63455995"
+      },
+      {
+        "name": "Godwig DeMettrie",
+        "url": "https://hpc.forumcommunity.net/?t=63454715"
+      }
     ],
-    summary: 'La Orden decidió entrenar el sigilo mediante un método poco convencional: El Escondite. Con este juego buscaban perfeccionar sus habilidades de ocultación de cara a la misión encomendada por la prefecta de Hufflepuff.',
-    conclusion: 'Entrenamiento de sigilo completado. Habilidades de ocultación mejoradas para la misión pendiente.'
+    "summary": "La Orden decidió entrenar el sigilo mediante un método poco convencional: El Escondite. Con este juego buscaban perfeccionar sus habilidades de ocultación de cara a la misión encomendada por la prefecta de Hufflepuff.",
+    "conclusion": "Entrenamiento de sigilo completado. Habilidades de ocultación mejoradas para la misión pendiente."
   },
   {
-    number: 'V',
-    title: 'Planes Futuros',
-    emoji: '🌏',
-    members: [
-      { name: 'Jude Bellingham', url: 'https://hpc.forumcommunity.net/?t=63456048' },
-      { name: 'Yuki Cho', url: 'https://hpc.forumcommunity.net/?t=63455116' },
-      { name: 'Kenzo Kylaeris', url: 'https://hpc.forumcommunity.net/?t=63455995' },
-      { name: 'Godwig DeMettrie', url: 'https://hpc.forumcommunity.net/?t=63454715' }
+    "number": "V",
+    "title": "Planes Futuros",
+    "emoji": "🌏",
+    "members": [
+      {
+        "name": "Jude Bellingham",
+        "url": "https://hpc.forumcommunity.net/?t=63456048"
+      },
+      {
+        "name": "Yuki Cho",
+        "url": "https://hpc.forumcommunity.net/?t=63455116"
+      },
+      {
+        "name": "Kenzo Kylaeris",
+        "url": "https://hpc.forumcommunity.net/?t=63455995"
+      },
+      {
+        "name": "Godwig DeMettrie",
+        "url": "https://hpc.forumcommunity.net/?t=63454715"
+      }
     ],
-    summary: 'La Orden se reunió para debatir sobre sus planes a largo plazo y el rumbo que tomarían sus aventuras futuras.',
-    conclusion: 'Acuerdo unánime: el próximo gran viaje de la Orden será al pueblo de Kenzo, en Vietnam. Primer destino fuera de Europa confirmado.'
+    "summary": "La Orden se reunió para debatir sobre sus planes a largo plazo y el rumbo que tomarían sus aventuras futuras.",
+    "conclusion": "Acuerdo unánime: el próximo gran viaje de la Orden será al pueblo de Kenzo, en Vietnam. Primer destino fuera de Europa confirmado."
   },
   {
-    number: 'VI',
-    title: 'Explorando Territorios',
-    emoji: '🌲',
-    members: [
-      { name: 'Jude Bellingham', url: 'https://hpc.forumcommunity.net/?t=63456048' },
-      { name: 'Yuki Cho', url: 'https://hpc.forumcommunity.net/?t=63455116' },
-      { name: 'Kenzo Kylaeris', url: 'https://hpc.forumcommunity.net/?t=63455995' },
-      { name: 'Godwig DeMettrie', url: 'https://hpc.forumcommunity.net/?t=63454715' }
+    "number": "VI",
+    "title": "Explorando Territorios",
+    "emoji": "🌲",
+    "members": [
+      {
+        "name": "Jude Bellingham",
+        "url": "https://hpc.forumcommunity.net/?t=63456048"
+      },
+      {
+        "name": "Yuki Cho",
+        "url": "https://hpc.forumcommunity.net/?t=63455116"
+      },
+      {
+        "name": "Kenzo Kylaeris",
+        "url": "https://hpc.forumcommunity.net/?t=63455995"
+      },
+      {
+        "name": "Godwig DeMettrie",
+        "url": "https://hpc.forumcommunity.net/?t=63454715"
+      }
     ],
-    summary: 'La Orden visitó el orfanato de Godwig, en cuyas inmediaciones se adentraron en el bosque encantado de la zona. Durante la exploración descubrieron una torre y tomaron la decisión de entrar.',
-    conclusion: 'Descubrimiento de la torre misteriosa en el bosque. Inicio del arco de la Torre.'
+    "summary": "La Orden visitó el orfanato de Godwig, en cuyas inmediaciones se adentraron en el bosque encantado de la zona. Durante la exploración descubrieron una torre y tomaron la decisión de entrar.",
+    "conclusion": "Descubrimiento de la torre misteriosa en el bosque. Inicio del arco de la Torre."
   },
   {
-    number: 'VII',
-    title: 'Sapos al Completo',
-    emoji: '🐸',
-    members: [
-      { name: 'Jude Bellingham', url: 'https://hpc.forumcommunity.net/?t=63456048' },
-      { name: 'Yuki Cho', url: 'https://hpc.forumcommunity.net/?t=63455116' },
-      { name: 'Kenzo Kylaeris', url: 'https://hpc.forumcommunity.net/?t=63455995' },
-      { name: 'Godwig DeMettrie', url: 'https://hpc.forumcommunity.net/?t=63454715' }
+    "number": "VII",
+    "title": "Sapos al Completo",
+    "emoji": "🐸",
+    "members": [
+      {
+        "name": "Jude Bellingham",
+        "url": "https://hpc.forumcommunity.net/?t=63456048"
+      },
+      {
+        "name": "Yuki Cho",
+        "url": "https://hpc.forumcommunity.net/?t=63455116"
+      },
+      {
+        "name": "Kenzo Kylaeris",
+        "url": "https://hpc.forumcommunity.net/?t=63455995"
+      },
+      {
+        "name": "Godwig DeMettrie",
+        "url": "https://hpc.forumcommunity.net/?t=63454715"
+      }
     ],
-    summary: 'La Orden al completo se reunió para compartir y analizar las nuevas informaciones surgidas en torno a los mongrels y licántropos. Los miembros pusieron en común todo lo que sabían... hasta que escucharon algo que los puso los pelos de punta.',
-    conclusion: '⚠️ Reunión interrumpida abruptamente. Los chicos tuvieron que abandonar corriendo ante un peligro imprevisto. La información compartida queda pendiente de procesar.'
+    "summary": "La Orden al completo se reunió para compartir y analizar las nuevas informaciones surgidas en torno a los mongrels y licántropos. Los miembros pusieron en común todo lo que sabían... hasta que escucharon algo que los puso los pelos de punta.",
+    "conclusion": "⚠️ Reunión interrumpida abruptamente. Los chicos tuvieron que abandonar corriendo ante un peligro imprevisto. La información compartida queda pendiente de procesar."
   },
   {
-    number: 'VIII',
-    title: 'Información y Deducción',
-    emoji: '🩸',
-    members: [
-      { name: 'Jude Bellingham', url: 'https://hpc.forumcommunity.net/?t=63456048' },
-      { name: 'Kenzo Kylaeris', url: 'https://hpc.forumcommunity.net/?t=63455995' },
-      { name: 'Godwig DeMettrie', url: 'https://hpc.forumcommunity.net/?t=63454715' }
+    "number": "VIII",
+    "title": "Información y Deducción",
+    "emoji": "🩸",
+    "members": [
+      {
+        "name": "Jude Bellingham",
+        "url": "https://hpc.forumcommunity.net/?t=63456048"
+      },
+      {
+        "name": "Kenzo Kylaeris",
+        "url": "https://hpc.forumcommunity.net/?t=63455995"
+      },
+      {
+        "name": "Godwig DeMettrie",
+        "url": "https://hpc.forumcommunity.net/?t=63454715"
+      }
     ],
-    summary: 'La Orden se reunió para analizar los sucesos recientes: el ataque sufrido por Jude a manos de un mongrel, una armadura agresiva contra Kenzo, y el ataque de carroñeros a Hogsmeade que presenció Godwig.',
-    conclusion: 'Los ataques no parecen casuales. La Orden empieza a considerar que algo o alguien está coordinando estos incidentes. La amenaza es real y está escalando.'
+    "summary": "La Orden se reunió para analizar los sucesos recientes: el ataque sufrido por Jude a manos de un mongrel, una armadura agresiva contra Kenzo, y el ataque de carroñeros a Hogsmeade que presenció Godwig.",
+    "conclusion": "Los ataques no parecen casuales. La Orden empieza a considerar que algo o alguien está coordinando estos incidentes. La amenaza es real y está escalando."
   },
   {
-    number: 'IX',
-    title: 'Subiendo la Torre',
-    emoji: '🗼',
-    members: [
-      { name: 'Jude Bellingham', url: 'https://hpc.forumcommunity.net/?t=63456048' },
-      { name: 'Yuki Cho', url: 'https://hpc.forumcommunity.net/?t=63455116' },
-      { name: 'Kenzo Kylaeris', url: 'https://hpc.forumcommunity.net/?t=63455995' },
-      { name: 'Godwig DeMettrie', url: 'https://hpc.forumcommunity.net/?t=63454715' },
-      { name: 'Li Xiang', url: 'https://hpc.forumcommunity.net/?t=63458959' }
+    "number": "IX",
+    "title": "Subiendo la Torre",
+    "emoji": "🗼",
+    "members": [
+      {
+        "name": "Jude Bellingham",
+        "url": "https://hpc.forumcommunity.net/?t=63456048"
+      },
+      {
+        "name": "Yuki Cho",
+        "url": "https://hpc.forumcommunity.net/?t=63455116"
+      },
+      {
+        "name": "Kenzo Kylaeris",
+        "url": "https://hpc.forumcommunity.net/?t=63455995"
+      },
+      {
+        "name": "Godwig DeMettrie",
+        "url": "https://hpc.forumcommunity.net/?t=63454715"
+      },
+      {
+        "name": "Li Xiang",
+        "url": "https://hpc.forumcommunity.net/?t=63458959"
+      }
     ],
-    summary: 'La Orden se adentró en la torre misteriosa del bosque. Sorpresa inesperada: Li Xiang les había estado siguiendo y se unió al grupo. El ascenso fue complicado: unas escaleras viejas y rotas obligaron a los miembros a retroceder y replantear la subida.',
-    conclusion: 'Primera tentativa fallida de alcanzar la cima. Las escaleras son un obstáculo serio. Primera aparición de Li Xiang como acompañante de la Orden.'
+    "summary": "La Orden se adentró en la torre misteriosa del bosque. Sorpresa inesperada: Li Xiang les había estado siguiendo y se unió al grupo. El ascenso fue complicado: unas escaleras viejas y rotas obligaron a los miembros a retroceder y replantear la subida.",
+    "conclusion": "Primera tentativa fallida de alcanzar la cima. Las escaleras son un obstáculo serio. Primera aparición de Li Xiang como acompañante de la Orden."
   },
   {
-    number: 'X',
-    title: 'En lo Más Alto de la Torre',
-    emoji: '✨',
-    members: [
-      { name: 'Jude Bellingham', url: 'https://hpc.forumcommunity.net/?t=63456048' },
-      { name: 'Yuki Cho', url: 'https://hpc.forumcommunity.net/?t=63455116' },
-      { name: 'Kenzo Kylaeris', url: 'https://hpc.forumcommunity.net/?t=63455995' },
-      { name: 'Godwig DeMettrie', url: 'https://hpc.forumcommunity.net/?t=63454715' },
-      { name: 'Li Xiang', url: 'https://hpc.forumcommunity.net/?t=63458959' }
+    "number": "X",
+    "title": "En lo Más Alto de la Torre",
+    "emoji": "✨",
+    "members": [
+      {
+        "name": "Jude Bellingham",
+        "url": "https://hpc.forumcommunity.net/?t=63456048"
+      },
+      {
+        "name": "Yuki Cho",
+        "url": "https://hpc.forumcommunity.net/?t=63455116"
+      },
+      {
+        "name": "Kenzo Kylaeris",
+        "url": "https://hpc.forumcommunity.net/?t=63455995"
+      },
+      {
+        "name": "Godwig DeMettrie",
+        "url": "https://hpc.forumcommunity.net/?t=63454715"
+      },
+      {
+        "name": "Li Xiang",
+        "url": "https://hpc.forumcommunity.net/?t=63458959"
+      }
     ],
-    summary: 'Gracias a la agilidad de Godwig, que subió primero y tendió una cuerda, todos los miembros lograron alcanzar la planta más alta de la torre. Allí encontraron algo oculto que apuntaba hacia un destino mucho más lejano que Londres.',
-    conclusion: '🌟 Descubrimiento crucial en la planta superior. El legado de William encontrado. Nuevo destino confirmado: más allá de Londres. Inicio del arco principal del Atlas.'
+    "summary": "Gracias a la agilidad de Godwig, que subió primero y tendió una cuerda, todos los miembros lograron alcanzar la planta más alta de la torre. Allí encontraron algo oculto que apuntaba hacia un destino mucho más lejano que Londres.",
+    "conclusion": "🌟 Descubrimiento crucial en la planta superior. El legado de William encontrado. Nuevo destino confirmado: más allá de Londres. Inicio del arco principal del Atlas."
   },
   {
-    number: 'XI',
-    title: 'Mercado Blackroot (I)',
-    emoji: '🏘️',
-    members: [
-      { name: 'Jude Bellingham', url: 'https://hpc.forumcommunity.net/?t=63456048' },
-      { name: 'Yuki Cho', url: 'https://hpc.forumcommunity.net/?t=63455116' },
-      { name: 'Kenzo Kylaeris', url: 'https://hpc.forumcommunity.net/?t=63455995' },
-      { name: 'Godwig DeMettrie', url: 'https://hpc.forumcommunity.net/?t=63454715' }
+    "number": "XI",
+    "title": "Mercado Blackroot (I)",
+    "emoji": "🏘️",
+    "members": [
+      {
+        "name": "Jude Bellingham",
+        "url": "https://hpc.forumcommunity.net/?t=63456048"
+      },
+      {
+        "name": "Yuki Cho",
+        "url": "https://hpc.forumcommunity.net/?t=63455116"
+      },
+      {
+        "name": "Kenzo Kylaeris",
+        "url": "https://hpc.forumcommunity.net/?t=63455995"
+      },
+      {
+        "name": "Godwig DeMettrie",
+        "url": "https://hpc.forumcommunity.net/?t=63454715"
+      }
     ],
-    summary: 'Siguiendo las pistas hacia Hollimshill, Irlanda, la Orden caminó hasta dar con un pequeño poblado mágico: Blackroot. En su mercado encontraron objetos de interés y, sobre todo, una tienda con información relacionada con la carta hallada por Jude.',
-    conclusion: 'Primer contacto con Blackroot y su mercado mágico. Pista sobre William localizada en uno de los puestos del mercado.'
+    "summary": "Siguiendo las pistas hacia Hollimshill, Irlanda, la Orden caminó hasta dar con un pequeño poblado mágico: Blackroot. En su mercado encontraron objetos de interés y, sobre todo, una tienda con información relacionada con la carta hallada por Jude.",
+    "conclusion": "Primer contacto con Blackroot y su mercado mágico. Pista sobre William localizada en uno de los puestos del mercado."
   },
   {
-    number: 'XII',
-    title: 'Mercado Blackroot (II)',
-    emoji: '🐉',
-    members: [
-      { name: 'Jude Bellingham', url: 'https://hpc.forumcommunity.net/?t=63456048' },
-      { name: 'Yuki Cho', url: 'https://hpc.forumcommunity.net/?t=63455116' },
-      { name: 'Kenzo Kylaeris', url: 'https://hpc.forumcommunity.net/?t=63455995' },
-      { name: 'Godwig DeMettrie', url: 'https://hpc.forumcommunity.net/?t=63454715' }
+    "number": "XII",
+    "title": "Mercado Blackroot (II)",
+    "emoji": "🐉",
+    "members": [
+      {
+        "name": "Jude Bellingham",
+        "url": "https://hpc.forumcommunity.net/?t=63456048"
+      },
+      {
+        "name": "Yuki Cho",
+        "url": "https://hpc.forumcommunity.net/?t=63455116"
+      },
+      {
+        "name": "Kenzo Kylaeris",
+        "url": "https://hpc.forumcommunity.net/?t=63455995"
+      },
+      {
+        "name": "Godwig DeMettrie",
+        "url": "https://hpc.forumcommunity.net/?t=63454715"
+      }
     ],
-    summary: 'La Orden comenzó a interrogar a los dependientes del mercado. Godwig estableció una buena relación con el vendedor de criaturas mágicas, quien les reveló información clave sobre William.',
-    conclusion: '🔑 Revelación mayor: William está vivo. Vive en una cueva en los acantilados de la costa de Irlanda. Nuevo destino inmediato confirmado: los Acantilados de Irlanda.'
+    "summary": "La Orden comenzó a interrogar a los dependientes del mercado. Godwig estableció una buena relación con el vendedor de criaturas mágicas, quien les reveló información clave sobre William.",
+    "conclusion": "🔑 Revelación mayor: William está vivo. Vive en una cueva en los acantilados de la costa de Irlanda. Nuevo destino inmediato confirmado: los Acantilados de Irlanda."
   }
 ];
 
 const ARCHIVE_ITEMS = [
   {
-    id: 'carta1',
-    type: 'CARTA',
-    title: 'Primera Carta de William',
-    date: 'Sin fechar — estimada c. 1888',
-    width: 200, left: 40, top: 80, rotate: -2,
-    preview: '"Si encontráis esto, es porque el tiempo ha decidido que estáis listos..."',
-    locked: false,
-    content: `Si encontráis esto, es porque el tiempo ha decidido que estáis listos para comprender lo que yo solo pude empezar.
-
-He viajado durante cuarenta años por este mundo mágico que compartimos. He recogido sus secretos, sus criaturas, sus ruinas, sus voces olvidadas.
-
-No soy un héroe. No soy un cazador. Soy, simplemente, alguien que no soportaba dejar las preguntas sin respuesta.
-
-El mapa que encontráis junto a esta carta es incompleto. Lo es a propósito. Hay lugares que no se pueden poner en un mapa hasta que los hayas visto con tus propios ojos.
-
-Seguid las marcas. Confiad en los pájaros. Y nunca, jamás, aceptéis que algo es imposible solo porque nadie lo ha logrado antes.
-
-— William`
+    "id": "carta1",
+    "type": "CARTA",
+    "title": "Primera Carta de William",
+    "date": "Sin fechar — estimada c. 1888",
+    "width": 200,
+    "left": 40,
+    "top": 80,
+    "rotate": -2,
+    "preview": "\"Si encontráis esto, es porque el tiempo ha decidido que estáis listos...\"",
+    "locked": false,
+    "content": "Si encontráis esto, es porque el tiempo ha decidido que estáis listos para comprender lo que yo solo pude empezar.\n\nHe viajado durante cuarenta años por este mundo mágico que compartimos. He recogido sus secretos, sus criaturas, sus ruinas, sus voces olvidadas.\n\nNo soy un héroe. No soy un cazador. Soy, simplemente, alguien que no soportaba dejar las preguntas sin respuesta.\n\nEl mapa que encontráis junto a esta carta es incompleto. Lo es a propósito. Hay lugares que no se pueden poner en un mapa hasta que los hayas visto con tus propios ojos.\n\nSeguid las marcas. Confiad en los pájaros. Y nunca, jamás, aceptéis que algo es imposible solo porque nadie lo ha logrado antes.\n\n— William"
   },
   {
-    id: 'mapa1',
-    type: 'MAPA',
-    title: 'Mapa del Mundo Mágico',
-    date: 'Cartografía personal de William',
-    width: 240, left: 270, top: 60, rotate: 1.5,
-    preview: 'Mapa parcialmente completo con marcas en tinta dorada y anotaciones al margen en tres idiomas.',
-    locked: false,
-    content: `NOTAS DEL MAPA — transcritas por Jude Bellingham
-
-El mapa de William cubre todo el mundo conocido. Las marcas doradas indican lugares visitados. Las marcas rojas, lugares que planeaba visitar.
-
-MARCAS IDENTIFICADAS:
-· Acantilados del Oeste — marcado en rojo
-· "P.R." — marcado pero con la página dañada
-· Una región oriental sin nombre — página arrancada
-· Hogwarts — marcado con una estrella dorada especial
-
-ANOTACIONES AL MARGEN:
-· "Las criaturas conocen los caminos que los mapas no muestran."
-· "Busca siempre la segunda puerta."
-· Un símbolo repetido que no hemos podido identificar.
-
-El mapa parece "actualizarse" ligeramente. Kenzo juró que una marca cambió de posición durante la noche.`
+    "id": "mapa1",
+    "type": "MAPA",
+    "title": "Mapa del Mundo Mágico",
+    "date": "Cartografía personal de William",
+    "width": 240,
+    "left": 270,
+    "top": 60,
+    "rotate": 1.5,
+    "preview": "Mapa parcialmente completo con marcas en tinta dorada y anotaciones al margen en tres idiomas.",
+    "locked": false,
+    "content": "NOTAS DEL MAPA — transcritas por Jude Bellingham\n\nEl mapa de William cubre todo el mundo conocido. Las marcas doradas indican lugares visitados. Las marcas rojas, lugares que planeaba visitar.\n\nMARCAS IDENTIFICADAS:\n· Acantilados del Oeste — marcado en rojo\n· \"P.R.\" — marcado pero con la página dañada\n· Una región oriental sin nombre — página arrancada\n· Hogwarts — marcado con una estrella dorada especial\n\nANOTACIONES AL MARGEN:\n· \"Las criaturas conocen los caminos que los mapas no muestran.\"\n· \"Busca siempre la segunda puerta.\"\n· Un símbolo repetido que no hemos podido identificar.\n\nEl mapa parece \"actualizarse\" ligeramente. Kenzo juró que una marca cambió de posición durante la noche."
   },
   {
-    id: 'nota1',
-    type: 'NOTA',
-    title: 'Nota sobre los Símbolos del Bosque',
-    date: 'Escrita por Jude — Noviembre 1971',
-    width: 180, left: 530, top: 40, rotate: 3,
-    preview: 'Boceto de las marcas encontradas en los árboles del Bosque Prohibido.',
-    locked: false,
-    content: `NOTA DE CAMPO — Jude Bellingham
-
-Los símbolos en los árboles del Bosque Prohibido.
-
-Son seis en total. Los he copiado aquí lo mejor que pude:
-
-① Círculo con tres líneas cruzadas
-② Espiral doble
-③ Triángulo invertido con un punto en el centro
-④ Dos medias lunas enfrentadas
-⑤ Una forma que no reconozco — casi parece un sapo saltando
-⑥ Número romano que podría ser "XIV"
-
-William los talló. Estoy segura. El estilo coincide con las marcas del margen del mapa.
-
-¿Qué significan? ¿Son un código? ¿Una ruta?
-
-Yuki cree que son coordenadas de algún tipo. Godwig cree que marcan lugares peligrosos. Kenzo no ha dicho nada, lo cual significa que sabe algo.`
+    "id": "nota1",
+    "type": "NOTA",
+    "title": "Nota sobre los Símbolos del Bosque",
+    "date": "Escrita por Jude — Noviembre 1971",
+    "width": 180,
+    "left": 530,
+    "top": 40,
+    "rotate": 3,
+    "preview": "Boceto de las marcas encontradas en los árboles del Bosque Prohibido.",
+    "locked": false,
+    "content": "NOTA DE CAMPO — Jude Bellingham\n\nLos símbolos en los árboles del Bosque Prohibido.\n\nSon seis en total. Los he copiado aquí lo mejor que pude:\n\n① Círculo con tres líneas cruzadas\n② Espiral doble\n③ Triángulo invertido con un punto en el centro\n④ Dos medias lunas enfrentadas\n⑤ Una forma que no reconozco — casi parece un sapo saltando\n⑥ Número romano que podría ser \"XIV\"\n\nWilliam los talló. Estoy segura. El estilo coincide con las marcas del margen del mapa.\n\n¿Qué significan? ¿Son un código? ¿Una ruta?\n\nYuki cree que son coordenadas de algún tipo. Godwig cree que marcan lugares peligrosos. Kenzo no ha dicho nada, lo cual significa que sabe algo."
   },
   {
-    id: 'reliquia1',
-    type: 'RELIQUIA',
-    title: 'La Brújula de Cobre',
-    date: 'Hallada en la Torre — Noviembre 1971',
-    width: 160, left: 40, top: 300, rotate: -1.5,
-    preview: 'Brújula de cobre antiguo. La aguja no apunta al Norte.',
-    locked: false,
-    content: `FICHA DE RELIQUIA — catalogada por Kenzo Kylaeris
-
-OBJETO: Brújula de cobre, tamaño de palma
-ESTADO: Excelente conservación
-PROCEDENCIA: Escritorio de William, Torre del Viajero
-
-DESCRIPCIÓN:
-La aguja no apunta al Norte magnético. Oscila y se detiene señalando en distintas direcciones según la persona que la sostiene.
-
-OBSERVACIONES:
-· En manos de Jude: apunta aproximadamente al SO
-· En manos de Kenzo: apunta al N
-· En manos de Yuki: gira sin parar
-· En manos de Godwig: la aguja no se mueve en absoluto
-
-HIPÓTESIS:
-¿Señala hacia algo que esa persona necesita encontrar? ¿Hacia su "verdad"? ¿Hacia peligro?
-
-Nota de Jude: "Cuando la sostuve, sentí algo. Frío primero, luego calor. Como si la brújula me estuviera leyendo a mí."
-
-ESTADO DE INVESTIGACIÓN: En curso`
+    "id": "reliquia1",
+    "type": "RELIQUIA",
+    "title": "La Brújula de Cobre",
+    "date": "Hallada en la Torre — Noviembre 1971",
+    "width": 160,
+    "left": 40,
+    "top": 300,
+    "rotate": -1.5,
+    "preview": "Brújula de cobre antiguo. La aguja no apunta al Norte.",
+    "locked": false,
+    "content": "FICHA DE RELIQUIA — catalogada por Kenzo Kylaeris\n\nOBJETO: Brújula de cobre, tamaño de palma\nESTADO: Excelente conservación\nPROCEDENCIA: Escritorio de William, Torre del Viajero\n\nDESCRIPCIÓN:\nLa aguja no apunta al Norte magnético. Oscila y se detiene señalando en distintas direcciones según la persona que la sostiene.\n\nOBSERVACIONES:\n· En manos de Jude: apunta aproximadamente al SO\n· En manos de Kenzo: apunta al N\n· En manos de Yuki: gira sin parar\n· En manos de Godwig: la aguja no se mueve en absoluto\n\nHIPÓTESIS:\n¿Señala hacia algo que esa persona necesita encontrar? ¿Hacia su \"verdad\"? ¿Hacia peligro?\n\nNota de Jude: \"Cuando la sostuve, sentí algo. Frío primero, luego calor. Como si la brújula me estuviera leyendo a mí.\"\n\nESTADO DE INVESTIGACIÓN: En curso"
   },
   {
-    id: 'misterio1',
-    type: 'DOCUMENTO',
-    title: '??? — Páginas Arrancadas',
-    date: 'Desconocida',
-    width: 180, left: 500, top: 280, rotate: -3,
-    preview: '▓▓▓▓▓ — contenido no accesible — ▓▓▓▓▓',
-    locked: true,
-    content: `ACCESO RESTRINGIDO
-
-Este documento no ha sido descifrado todavía.
-
-Las páginas arrancadas del diario de William permanecen como un misterio.
-
-¿Qué no quería que encontráramos?`
+    "id": "misterio1",
+    "type": "DOCUMENTO",
+    "title": "??? — Páginas Arrancadas",
+    "date": "Desconocida",
+    "width": 180,
+    "left": 500,
+    "top": 280,
+    "rotate": -3,
+    "preview": "▓▓▓▓▓ — contenido no accesible — ▓▓▓▓▓",
+    "locked": true,
+    "content": "ACCESO RESTRINGIDO\n\nEste documento no ha sido descifrado todavía.\n\nLas páginas arrancadas del diario de William permanecen como un misterio.\n\n¿Qué no quería que encontráramos?"
   },
   {
-    id: 'carta2',
-    type: 'CARTA',
-    title: 'Carta de Mira Ashfen',
-    date: 'Noviembre, 1971',
-    width: 195, left: 220, top: 320, rotate: 0.5,
-    preview: '"El hombre que buscáis pagó en monedas que nadie había visto antes..."',
-    locked: false,
-    content: `A quien corresponda entre los jóvenes viajeros,
-
-Habéis venido preguntando por El Recogedor. Por William. No sé si queréis ayudarle o encontrar lo que él encontró. En cualquier caso, os merece la pena escuchar.
-
-Vino a mi tienda tres veces. La primera buscaba recipientes para conservar pergaminos viejos. La segunda, cuerdas encantadas para escalar superficies mojadas. La tercera, y última, solo quería hablar.
-
-Me dijo que había encontrado "algo que no debería existir" en una cueva de la costa occidental. No quiso decir qué. Tenía los ojos de alguien que ha visto demasiado.
-
-Pagó con monedas doradas con un símbolo que nunca he visto en ningún catálogo de galeones.
-
-No volvió.
-
-Sed cuidadosos, jóvenes.
-
-— Mira Ashfen
-Blackroot, Noviembre 1971`
+    "id": "carta2",
+    "type": "CARTA",
+    "title": "Carta de Mira Ashfen",
+    "date": "Noviembre, 1971",
+    "width": 195,
+    "left": 220,
+    "top": 320,
+    "rotate": 0.5,
+    "preview": "\"El hombre que buscáis pagó en monedas que nadie había visto antes...\"",
+    "locked": false,
+    "content": "A quien corresponda entre los jóvenes viajeros,\n\nHabéis venido preguntando por El Recogedor. Por William. No sé si queréis ayudarle o encontrar lo que él encontró. En cualquier caso, os merece la pena escuchar.\n\nVino a mi tienda tres veces. La primera buscaba recipientes para conservar pergaminos viejos. La segunda, cuerdas encantadas para escalar superficies mojadas. La tercera, y última, solo quería hablar.\n\nMe dijo que había encontrado \"algo que no debería existir\" en una cueva de la costa occidental. No quiso decir qué. Tenía los ojos de alguien que ha visto demasiado.\n\nPagó con monedas doradas con un símbolo que nunca he visto en ningún catálogo de galeones.\n\nNo volvió.\n\nSed cuidadosos, jóvenes.\n\n— Mira Ashfen\nBlackroot, Noviembre 1971"
   }
 ];
 
 const CHARACTERS = [
   {
-    name: 'Jude Bellingham',
-    emoji: '🌙',
-    house: 'Gryffindor',
-    origin: 'Stourbridge, West Midlands',
-    firstExpedition: 'Torre del Viajero (Expedición II)',
-    lastExpedition: 'Blackroot (Expedición III)',
-    role: 'Observadora · Archivista',
-    notes: 'Siempre parece fijarse en cosas que los demás no ven. Fue la primera en reconocer los símbolos del mapa de William como un sistema coherente.',
-    quote: '"Las preguntas no resueltas son solo respuestas que todavía no hemos merecido."'
+    "name": "Jude Bellingham",
+    "emoji": "🌙",
+    "house": "Gryffindor",
+    "origin": "Stourbridge, West Midlands",
+    "firstExpedition": "Torre del Viajero (Expedición II)",
+    "lastExpedition": "Blackroot (Expedición III)",
+    "role": "Observadora · Archivista",
+    "notes": "Siempre parece fijarse en cosas que los demás no ven. Fue la primera en reconocer los símbolos del mapa de William como un sistema coherente.",
+    "quote": "\"Las preguntas no resueltas son solo respuestas que todavía no hemos merecido.\""
   },
   {
-    name: 'Kenzo Kylaeris',
-    emoji: '⚡',
-    house: 'Slytherin',
-    origin: 'Kioto, Japón — transferido',
-    firstExpedition: 'Torre del Viajero (Expedición II)',
-    lastExpedition: 'Blackroot (Expedición III)',
-    role: 'Estratega · Catálogo de Reliquias',
-    notes: 'Habla poco, piensa más. Su silencio suele significar que ya sabe la respuesta pero está decidiendo si compartirla. Catalogó la brújula de cobre con una minuciosidad que dejó a los demás sin palabras.',
-    quote: '"No confío en los mapas que no tienen manchas."'
+    "name": "Kenzo Kylaeris",
+    "emoji": "⚡",
+    "house": "Slytherin",
+    "origin": "Kioto, Japón — transferido",
+    "firstExpedition": "Torre del Viajero (Expedición II)",
+    "lastExpedition": "Blackroot (Expedición III)",
+    "role": "Estratega · Catálogo de Reliquias",
+    "notes": "Habla poco, piensa más. Su silencio suele significar que ya sabe la respuesta pero está decidiendo si compartirla. Catalogó la brújula de cobre con una minuciosidad que dejó a los demás sin palabras.",
+    "quote": "\"No confío en los mapas que no tienen manchas.\""
   },
   {
-    name: 'Yuki Cho',
-    emoji: '🌸',
-    house: 'Ravenclaw',
-    origin: 'Seúl, Corea — transferida',
-    firstExpedition: 'La Bibliotecaria (Expedición I)',
-    lastExpedition: 'Blackroot (Expedición III)',
-    role: 'Investigadora · Teorías',
-    notes: 'La primera idea siempre es suya, aunque no siempre esté en lo correcto. Fue quien propuso investigar a la bibliotecaria. También fue quien descifró el primer símbolo del Bosque Prohibido.',
-    quote: '"Las teorías equivocadas también sirven. Te dicen lo que no es."'
+    "name": "Yuki Cho",
+    "emoji": "🌸",
+    "house": "Ravenclaw",
+    "origin": "Seúl, Corea — transferida",
+    "firstExpedition": "La Bibliotecaria (Expedición I)",
+    "lastExpedition": "Blackroot (Expedición III)",
+    "role": "Investigadora · Teorías",
+    "notes": "La primera idea siempre es suya, aunque no siempre esté en lo correcto. Fue quien propuso investigar a la bibliotecaria. También fue quien descifró el primer símbolo del Bosque Prohibido.",
+    "quote": "\"Las teorías equivocadas también sirven. Te dicen lo que no es.\""
   },
   {
-    name: 'Godwig DeMettrie',
-    emoji: '🦉',
-    house: 'Hufflepuff',
-    origin: 'Brujas, Bélgica',
-    firstExpedition: 'La Bibliotecaria (Expedición I)',
-    lastExpedition: 'Blackroot (Expedición III)',
-    role: 'Soporte · Memoria',
-    notes: 'El que recuerda todo. Fechas, nombres, detalles que los demás olvidan. También el que se asegura de que nadie quede atrás. Cuando la brújula de cobre no se movió en sus manos, fue el único que no pareció sorprendido.',
-    quote: '"Un buen viaje no es el más veloz. Es el del que todos vuelven."'
+    "name": "Godwig DeMettrie",
+    "emoji": "🦉",
+    "house": "Hufflepuff",
+    "origin": "Brujas, Bélgica",
+    "firstExpedition": "La Bibliotecaria (Expedición I)",
+    "lastExpedition": "Blackroot (Expedición III)",
+    "role": "Soporte · Memoria",
+    "notes": "El que recuerda todo. Fechas, nombres, detalles que los demás olvidan. También el que se asegura de que nadie quede atrás. Cuando la brújula de cobre no se movió en sus manos, fue el único que no pareció sorprendido.",
+    "quote": "\"Un buen viaje no es el más veloz. Es el del que todos vuelven.\""
   }
 ];
 
@@ -2196,8 +2359,7 @@ window.addEventListener('load', () => {
     <p style="font-family:'IM Fell English',serif;font-size:13px;color:rgba(244,232,193,0.6);font-style:italic">
       Introduce la contraseña de la Orden para acceder al modo edición.
     </p>
-    <input type="password" id="pwd-input" placeholder="· · · · · · · ·"
-      onkeydown="if(event.key==='Enter')checkPassword()">
+    <input type="password" id="pwd-input" placeholder="· · · · · · · ·" onkeydown="if(event.key==='Enter')checkPassword()">
     <div id="pwd-error"></div>
     <div class="admin-modal-actions" style="justify-content:center">
       <button class="admin-btn" onclick="checkPassword()">Acceder</button>
@@ -2210,8 +2372,8 @@ window.addEventListener('load', () => {
 <div class="admin-modal-overlay" id="loc-modal">
   <div class="admin-modal">
     <button class="admin-close-btn" onclick="closeAllAdminModals()">✕</button>
-    <h3 id="loc-modal-title">Nueva Localización</h3>
-    <input type="hidden" id="loc-edit-id">
+    <h3 id="loc-modal-title">Editar: Blackroot</h3>
+    <input type="hidden" id="loc-edit-id" value="blackroot">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
       <div class="admin-field">
         <label>Nombre</label>
@@ -2252,7 +2414,8 @@ window.addEventListener('load', () => {
     </div>
     <div class="admin-field">
       <label>Eventos (uno por línea)</label>
-      <textarea id="loc-events" placeholder="Primer encuentro&#10;Descubrimiento del mapa"></textarea>
+      <textarea id="loc-events" placeholder="Primer encuentro
+Descubrimiento del mapa"></textarea>
     </div>
     <div class="admin-field">
       <label>Notas del Archivo</label>
@@ -2260,7 +2423,7 @@ window.addEventListener('load', () => {
     </div>
     <div class="admin-modal-actions">
       <button class="admin-btn" onclick="saveLocationEdit()">💾 Guardar</button>
-      <button class="admin-btn danger" id="loc-delete-btn" onclick="deleteLocation()" style="display:none">🗑 Eliminar</button>
+      <button class="admin-btn danger" id="loc-delete-btn" onclick="deleteLocation()" style="display: block;">🗑 Eliminar</button>
       <button class="admin-btn" onclick="closeAllAdminModals()">Cancelar</button>
     </div>
     <p style="font-family:'IM Fell English',serif;font-size:11px;color:rgba(255,204,68,0.4);font-style:italic;margin-top:12px">
@@ -2291,7 +2454,8 @@ window.addEventListener('load', () => {
     </div>
     <div class="admin-field">
       <label>Participantes (nombre|url, uno por línea — sin url si no tiene)</label>
-      <textarea id="exp-members" placeholder="Jude Bellingham|https://hpc.forumcommunity.net/?t=63456048&#10;Kenzo Kylaeris|https://hpc.forumcommunity.net/?t=63455995"></textarea>
+      <textarea id="exp-members" placeholder="Jude Bellingham|https://hpc.forumcommunity.net/?t=63456048
+Kenzo Kylaeris|https://hpc.forumcommunity.net/?t=63455995"></textarea>
     </div>
     <div class="admin-field">
       <label>Resumen</label>
@@ -2331,8 +2495,7 @@ window.addEventListener('load', () => {
         <div class="admin-field" style="margin:0">
           <label>Color</label>
           <div style="display:flex;gap:6px;align-items:center">
-            <input type="color" id="route-color-input" value="#b8860b"
-              style="width:44px;height:36px;border:1px solid rgba(255,204,68,0.3);background:none;cursor:pointer;padding:2px">
+            <input type="color" id="route-color-input" value="#b8860b" style="width:44px;height:36px;border:1px solid rgba(255,204,68,0.3);background:none;cursor:pointer;padding:2px">
             <div id="route-color-presets" style="display:flex;gap:4px;flex-wrap:wrap"></div>
           </div>
         </div>
@@ -2407,7 +2570,7 @@ window.addEventListener('load', () => {
     </div>
     <div class="admin-field">
       <label>Vista previa (texto corto en la mesa)</label>
-      <input type="text" id="arch-preview" placeholder='"Si encontráis esto..."'>
+      <input type="text" id="arch-preview" placeholder="&quot;Si encontráis esto...&quot;">
     </div>
     <div class="admin-field">
       <label>Contenido completo (se lee al abrir el documento)</label>
@@ -2463,7 +2626,7 @@ window.addEventListener('load', () => {
     </div>
     <div class="admin-field">
       <label>Cita personal</label>
-      <input type="text" id="char-quote" placeholder='"Las preguntas no resueltas..."'>
+      <input type="text" id="char-quote" placeholder="&quot;Las preguntas no resueltas...&quot;">
     </div>
     <div class="admin-modal-actions">
       <button class="admin-btn" onclick="saveCharEdit()">💾 Guardar</button>
@@ -2499,7 +2662,7 @@ window.addEventListener('load', () => {
 </div>
 
 <!-- ─── GITHUB SYNC MODAL ─── -->
-<div class="admin-modal-overlay" id="github-modal">
+<div class="admin-modal-overlay open" id="github-modal">
   <div class="admin-modal" style="max-width:540px">
     <button class="admin-close-btn" onclick="closeAllAdminModals()">✕</button>
     <h3>☁ Sincronizar con GitHub</h3>
@@ -2521,8 +2684,7 @@ window.addEventListener('load', () => {
     </div>
     <div class="admin-field">
       <label>Token de acceso personal
-        <a href="https://github.com/settings/tokens/new?scopes=repo&description=AtlasWilliam" target="_blank"
-          style="color:#88aaff;font-family:'Cinzel',serif;font-size:8px;letter-spacing:1px;margin-left:8px">
+        <a href="https://github.com/settings/tokens/new?scopes=repo&amp;description=AtlasWilliam" target="_blank" style="color:#88aaff;font-family:'Cinzel',serif;font-size:8px;letter-spacing:1px;margin-left:8px">
           → Crear token en GitHub
         </a>
       </label>
@@ -2532,10 +2694,10 @@ window.addEventListener('load', () => {
       </p>
     </div>
 
-    <div id="gh-status" style="font-family:'Crimson Text',serif;font-size:13px;min-height:20px;margin-bottom:10px;padding:8px 12px;background:rgba(0,0,0,0.3);display:none;line-height:1.5"></div>
+    <div id="gh-status" style="font-family: &quot;Crimson Text&quot;, serif; font-size: 13px; min-height: 20px; margin-bottom: 10px; padding: 8px 12px; background: rgba(0, 0, 0, 0.3); display: block; line-height: 1.5; color: rgb(136, 170, 255);">Generando HTML con tus cambios...</div>
 
     <div class="admin-modal-actions">
-      <button class="admin-btn" onclick="pushToGitHub()" id="gh-push-btn">☁ Publicar ahora</button>
+      <button class="admin-btn" onclick="pushToGitHub()" id="gh-push-btn" disabled="">⏳ Publicando...</button>
       <button class="admin-btn" onclick="closeAllAdminModals()">Cerrar</button>
     </div>
 
@@ -3054,49 +3216,52 @@ function buildExportHTML() {
 }
 
 async function pushToGitHub() {
-  const user  = (document.getElementById('gh-user')  || {}).value?.trim();
-  const repo  = (document.getElementById('gh-repo')  || {}).value?.trim();
-  const path  = (document.getElementById('gh-path')  || {}).value?.trim() || 'index.html';
-  const token = (document.getElementById('gh-token') || {}).value?.trim();
-  const btn   = document.getElementById('gh-push-btn');
+  const user  = document.getElementById('gh-user').value.trim();
+  const repo  = document.getElementById('gh-repo').value.trim();
+  const path  = document.getElementById('gh-path').value.trim() || 'index.html';
+  const token = document.getElementById('gh-token').value.trim();
+  const statusEl = document.getElementById('gh-status');
+  const btn = document.getElementById('gh-push-btn');
 
   if (!user || !repo || !token) {
     setGhStatus('⚠ Rellena usuario, repositorio y token antes de continuar.', '#ffaa44');
     return;
   }
 
+  // Save config (but not token unless user wants — we save it for convenience)
   localStorage.setItem(GH_STORAGE_KEY, JSON.stringify({ user, repo, path, token }));
 
-  if (btn) { btn.disabled = true; btn.textContent = '⏳ Publicando...'; }
+  btn.disabled = true;
+  btn.textContent = '⏳ Publicando...';
   setGhStatus('Generando HTML con tus cambios...', '#88aaff');
 
   try {
-    // Build HTML
     const htmlContent = buildExportHTML();
+    const base64Content = btoa(unescape(encodeURIComponent(htmlContent)));
 
-    // Robust UTF-8 → base64 that handles all Unicode characters
-    const bytes = new TextEncoder().encode(htmlContent);
-    let binary = '';
-    const chunkSize = 8192;
-    for (let i = 0; i < bytes.length; i += chunkSize) {
-      binary += String.fromCharCode(...bytes.subarray(i, i + chunkSize));
-    }
-    const base64Content = btoa(binary);
-
+    // Get current file SHA (needed for updates)
     setGhStatus('Conectando con GitHub...', '#88aaff');
     const apiBase = `https://api.github.com/repos/${user}/${repo}/contents/${path}`;
-
-    // Get current SHA (needed to overwrite existing file)
     let sha = null;
     try {
       const getRes = await fetch(apiBase, {
         headers: { Authorization: `token ${token}`, Accept: 'application/vnd.github.v3+json' }
       });
-      if (getRes.ok) sha = (await getRes.json()).sha;
-    } catch(_) {}
+      if (getRes.ok) {
+        const data = await getRes.json();
+        sha = data.sha;
+      }
+    } catch(e) {}
 
+    // Push
     setGhStatus('Subiendo archivo...', '#88aaff');
-    const now  = new Date().toLocaleString('es-ES');
+    const now = new Date().toLocaleString('es-ES');
+    const body = {
+      message: `Atlas William — actualización ${now}`,
+      content: base64Content,
+      ...(sha ? { sha } : {})
+    };
+
     const putRes = await fetch(apiBase, {
       method: 'PUT',
       headers: {
@@ -3104,36 +3269,31 @@ async function pushToGitHub() {
         Accept: 'application/vnd.github.v3+json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({
-        message: `Atlas William — actualización ${now}`,
-        content: base64Content,
-        ...(sha ? { sha } : {})
-      })
+      body: JSON.stringify(body)
     });
 
     if (putRes.ok) {
       const pagesUrl = `https://${user}.github.io/${repo}/`;
       setGhStatus(
-        `✦ ¡Publicado correctamente! En 1–2 minutos el atlas estará actualizado en:<br>
-         <a href="${pagesUrl}" target="_blank" style="color:#88aaff">${pagesUrl}</a>`,
+        `✦ ¡Publicado! En 1-2 minutos el atlas estará actualizado en:<br>
+        <a href="${pagesUrl}" target="_blank" style="color:#88aaff">${pagesUrl}</a>`,
         '#88cc88'
       );
       showAdminToast('☁ Publicado en GitHub Pages');
     } else {
-      let errMsg = `Error ${putRes.status}`;
-      try { const j = await putRes.json(); errMsg += ': ' + (j.message || JSON.stringify(j)); } catch(_) {}
-      setGhStatus(`✕ ${errMsg}`, '#ff8888');
+      const err = await putRes.json();
+      setGhStatus(`✕ Error ${putRes.status}: ${err.message || 'Comprueba el token y el repositorio.'}`, '#ff8888');
     }
   } catch(e) {
-    setGhStatus(`✕ Error: ${e?.message || String(e)}`, '#ff8888');
+    setGhStatus(`✕ Error de red: ${e.message}`, '#ff8888');
   }
 
-  if (btn) { btn.disabled = false; btn.textContent = '☁ Publicar ahora'; }
+  btn.disabled = false;
+  btn.textContent = '☁ Publicar ahora';
 }
 
 function setGhStatus(msg, color) {
   const el = document.getElementById('gh-status');
-  if (!el) return;
   el.style.display = 'block';
   el.style.color = color || '#f4e8c1';
   el.innerHTML = msg;
@@ -3179,5 +3339,6 @@ document.querySelectorAll('.admin-modal-overlay').forEach(el => {
   el.addEventListener('click', e => { if (e.target === el) closeAllAdminModals(); });
 });
 </script>
-</body>
-</html>
+
+
+</body></html>
