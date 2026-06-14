@@ -2976,6 +2976,9 @@ window.addEventListener('load', () => {
   document.getElementById('admin-btn').textContent = '🔒';
   document.getElementById('admin-btn').classList.remove('unlocked');
   document.getElementById('admin-bar').classList.remove('visible');
+  // Resetear botón de GitHub por si quedó bloqueado en el HTML exportado
+  const ghBtn = document.getElementById('gh-push-btn');
+  if (ghBtn) { ghBtn.disabled = false; ghBtn.textContent = '☁ Publicar ahora'; }
   // Close any modal that may have been open when the HTML was exported
   closeAllAdminModals();
   initMap();
@@ -3323,10 +3326,10 @@ Kenzo Kylaeris|https://hpc.forumcommunity.net/?t=63455995"></textarea>
       </p>
     </div>
 
-    <div id="gh-status" style="font-family: &quot;Crimson Text&quot;, serif; font-size: 13px; min-height: 20px; margin-bottom: 10px; padding: 8px 12px; background: rgba(0, 0, 0, 0.3); display: none; line-height: 1.5; color: rgb(136, 170, 255);">④ Generando HTML con tus datos...</div>
+    <div id="gh-status" style="font-family:'Crimson Text',serif;font-size:13px;min-height:20px;margin-bottom:10px;padding:8px 12px;background:rgba(0,0,0,0.3);display:none;line-height:1.5"></div>
 
     <div class="admin-modal-actions">
-      <button class="admin-btn" onclick="pushToGitHub()" id="gh-push-btn" disabled="">⏳ Publicando...</button>
+      <button class="admin-btn" onclick="pushToGitHub()" id="gh-push-btn">☁ Publicar ahora</button>
       <button class="admin-btn" onclick="closeAllAdminModals()">Cerrar</button>
     </div>
 
@@ -3818,18 +3821,11 @@ const GH_STORAGE_KEY = 'atlas_william_github';
 let _ghTokenMemory = '';
 
 function openGithubModal() {
-  // Detectar si se está abriendo desde un archivo local (no funciona la API)
-  if (location.protocol === 'file:') {
-    setGhStatus(
-      '⚠ Estás abriendo el atlas como archivo local (file://).<br>' +
-      'Para publicar en GitHub debes abrirlo desde un servidor o desde GitHub Pages.<br>' +
-      '<b>Usa el botón ⬇ Exportar HTML</b> para descargar el archivo y súbelo manualmente a GitHub.',
-      '#ffaa44'
-    );
-    document.getElementById('gh-status').style.display = 'block';
-    document.getElementById('github-modal').classList.add('open');
-    return;
-  }
+  // Siempre resetear el botón al abrir — puede haber quedado bloqueado
+  const btn = document.getElementById('gh-push-btn');
+  if (btn) { btn.disabled = false; btn.textContent = '☁ Publicar ahora'; }
+  document.getElementById('gh-status').style.display = 'none';
+
   try {
     const cfg = JSON.parse(localStorage.getItem(GH_STORAGE_KEY) || '{}');
     document.getElementById('gh-user').value  = cfg.user || '';
@@ -3837,7 +3833,6 @@ function openGithubModal() {
     document.getElementById('gh-path').value  = cfg.path || 'index.html';
     document.getElementById('gh-token').value = _ghTokenMemory || '';
   } catch(e) {}
-  document.getElementById('gh-status').style.display = 'none';
   document.getElementById('github-modal').classList.add('open');
 }
 
@@ -3897,6 +3892,17 @@ async function pushToGitHub() {
 
   if (!user || !repo || !token) {
     setGhStatus('⚠ Rellena usuario, repositorio y token antes de continuar.', '#ffaa44');
+    return;
+  }
+
+  // Detectar archivo local — la API de GitHub no funciona desde file://
+  if (location.protocol === 'file:') {
+    setGhStatus(
+      '⚠ Estás abriendo el atlas como archivo local.<br>' +
+      'La sincronización con GitHub solo funciona cuando el atlas está abierto desde GitHub Pages.<br>' +
+      '<b>Usa el botón ⬇ Exportar HTML</b> para descargar y subir el archivo manualmente.',
+      '#ffaa44'
+    );
     return;
   }
 
