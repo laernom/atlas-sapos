@@ -1,0 +1,717 @@
+{
+  "locations": [
+    {
+      "id": "hogwarts",
+      "name": "Hogwarts",
+      "region": "Tierras Altas de Escocia",
+      "icon": "🏰",
+      "lat": 57.3,
+      "lng": -4.4,
+      "status": "visitado",
+      "history": "Colegio Hogwarts de Magia y Hechicería. Punto de origen de la Orden del Sapo Saltarín. Entre sus muros nació la idea de continuar los viajes de William.",
+      "members": [
+        "Jude",
+        "Kenzo",
+        "Yuki",
+        "Godwig"
+      ],
+      "events": [
+        "Primer encuentro de la Orden",
+        "Formación del pacto del Sapo Saltarín",
+        "Consulta del Archivo de la Biblioteca"
+      ],
+      "notes": "La Biblioteca Restringida contiene referencias vagas a un \"Viajero sin nombre\" que visitó el castillo a mediados del siglo XIX."
+    },
+    {
+      "id": "torre",
+      "name": "Torre del Viajero",
+      "region": "Páramos de Yorkshire",
+      "icon": "🗼",
+      "lat": 54.1,
+      "lng": -1.9,
+      "status": "visitado",
+      "history": "Torre abandonada descubierta por la Orden durante una tormenta. En la sala superior, perfectamente conservada, encontraron el legado de William: sus mapas, su diario y la primera carta.",
+      "members": [
+        "Jude",
+        "Kenzo",
+        "Yuki",
+        "Godwig"
+      ],
+      "events": [
+        "Descubrimiento de la sala de William",
+        "Hallazgo del Mapa del Mundo Mágico",
+        "Primera carta de William encontrada",
+        "Decisión de continuar los viajes"
+      ],
+      "notes": "La sala no tenía polvo. Como si alguien la hubiera conservado con magia. En el escritorio había tinta fresca en la pluma."
+    },
+    {
+      "id": "blackroot",
+      "name": "Blackroot",
+      "region": "Condados del Oeste, Inglaterra",
+      "icon": "🏘️",
+      "lat": 54.6865,
+      "lng": -4.2847,
+      "status": "visitado",
+      "history": "Pequeño pueblo mágico oculto en los suburbios de los Midlands. Conocido entre viajeros por su mercado de reliquias y su antigua taberna, El Caldero Agrietado.",
+      "members": [
+        "Jude",
+        "Kenzo",
+        "Yuki",
+        "Godwig"
+      ],
+      "events": [
+        "Investigación de rumores sobre William",
+        "Encuentro con la comerciante Mira Ashfen",
+        "Pista sobre los Acantilados de Irlanda"
+      ],
+      "notes": "Varios lugareños recuerdan a un hombre de viaje llamado \"El Recogedor\". Nadie sabe su nombre. Mira Ashfen le vendió algo, pero no quiso decir qué."
+    },
+    {
+      "id": "irlanda",
+      "name": "Acantilados de Irlanda",
+      "region": "Costa occidental de Irlanda",
+      "icon": "⛰️",
+      "lat": 53.3506,
+      "lng": -9.8547,
+      "status": "visitado",
+      "history": "Escarpados acantilados frente al Atlántico. Existe una cueva accesible únicamente durante la marea baja que los locales llaman \"La Boca del Profundo\". William pudo haber dejado algo allí.",
+      "members": [
+        "Jude",
+        "Kenzo",
+        "Yuki",
+        "Godwig"
+      ],
+      "events": [
+        "• Primera expedición de la Orden fuera de las Islas Británicas.",
+        "• Seguimiento de las pistas encontradas en Blackroot.",
+        "• Descubrimiento de símbolos grabados en la roca.",
+        "• Confirmación de la presencia previa de William.",
+        "• Hallazgo de la entrada a una cueva oculta."
+      ],
+      "notes": "Mira Ashfen mencionó que William compró cuerdas encantadas, linternas de aguanieve y conservantes de pergamino. Todo compatible con exploración de cuevas húmedas.\n\n• El mapa de William señalaba esta ubicación con una anotación parcial.\n• Algunas marcas encontradas en las rocas coinciden con las vistas en la Torre del Viajero.\n• No se encontraron restos recientes de actividad humana.\n• La entrada permanecía oculta desde el mar y desde los senderos principales.\n• La exploración de la cueva fue pospuesta para una expedición posterior."
+    },
+    {
+      "id": "bosque",
+      "name": "Bosque Prohibido",
+      "region": "Hogwarts, Escocia",
+      "icon": "🌲",
+      "lat": 57.25,
+      "lng": -4.5,
+      "status": "visitado",
+      "history": "El Bosque Prohibido, en los terrenos de Hogwarts. Nadie entra sin permiso. Sin embargo, en las notas de William aparece mencionado como \"el primer umbral\".",
+      "members": [
+        "Jude",
+        "Yuki"
+      ],
+      "events": [
+        "Incursión nocturna no autorizada",
+        "Hallazgo de marcas antiguas en los árboles",
+        "Encuentro con criatura no identificada"
+      ],
+      "notes": "Las marcas en los árboles coinciden con símbolos de los mapas de William. Son viejas. Muy viejas."
+    },
+    {
+      "id": "desconocido1",
+      "name": "??? — Anotación Ilegible",
+      "region": "Ubicación no determinada",
+      "icon": "❓",
+      "lat": 48.5166,
+      "lng": 2.0654,
+      "status": "misterio",
+      "history": "Una mancha en el mapa de William. Las palabras alrededor están corroídas. Solo se pueden distinguir dos letras: \"P\" y \"R\".",
+      "members": [],
+      "events": [],
+      "notes": "El mapa parece dañado deliberadamente en este punto."
+    },
+    {
+      "id": "desconocido2",
+      "name": "??? — Mapa Dañado",
+      "region": "Región Oriental Desconocida",
+      "icon": "🔒",
+      "lat": 41,
+      "lng": 29,
+      "status": "misterio",
+      "history": "Una sección del mapa de William ha sido arrancada. Lo que queda muestra solo fragmentos de costa y algo que podría ser un faro.",
+      "members": [],
+      "events": [],
+      "notes": "Las páginas fueron arrancadas. No por el tiempo. Con cuidado. Con intención."
+    },
+    {
+      "id": "prueba_1781215334263",
+      "name": "Castillo de Vârful Umbrei",
+      "icon": "🏰",
+      "lat": 44.9181,
+      "lng": 25.73,
+      "region": "Montañas de Transilvania",
+      "status": "misterio",
+      "history": "Situado supuestamente en algún lugar de las montañas de Transilvania, el Castillo de Vârful Umbrei es la siguiente parada conocida en la ruta de William. La información disponible es extremadamente escasa y procede principalmente de rumores recogidos por el propio viajero.\n\nAlgunos testimonios describen luces apareciendo en ventanas abandonadas. Otros afirman que la distribución interior cambia de una visita a otra. Ninguna fuente coincide por completo con otra.\n\nPor el momento, la existencia del castillo sigue sin estar confirmada.",
+      "members": [],
+      "events": [
+        "Eventos",
+        "• Referenciado por primera vez en la segunda carta de William.",
+        "• Incorporado al Atlas de la Orden del Sapo Saltarín.",
+        "• Considerado próximo objetivo de exploración."
+      ],
+      "notes": "Notas del Archivo\n\n• Ubicación exacta desconocida.\n• Posible localización en Transilvania.\n• William abandonó Irlanda para investigar este lugar.\n• Ningún miembro de la Orden ha visitado todavía el castillo.\n• Estado actual: Investigación pendiente."
+    },
+    {
+      "id": "cueva_de_william_1781450680754",
+      "name": "Cueva de William",
+      "icon": "🌊",
+      "lat": 53.1072,
+      "lng": -10.0085,
+      "region": "Acantilados Oeste, Irlanda",
+      "status": "visitado",
+      "history": "Oculta entre los acantilados irlandeses, la cueva resultó ser mucho más que un simple refugio natural. En su interior, la Orden descubrió señales inequívocas de que William había utilizado aquel lugar como campamento temporal durante uno de sus viajes.\n\nLa cueva contenía restos de una antigua estancia: una hoguera apagada hacía años, herramientas deterioradas y una caja protegida de la humedad. Dentro aguardaban nuevas pistas sobre la ruta del viajero.\n\nEntre los documentos recuperados destacaba una carta en la que William relataba los rumores sobre un misterioso castillo situado en las montañas de Transilvania. Aquella carta se convirtió en la primera referencia directa a un destino fuera del entorno habitual de las expediciones.",
+      "members": [
+        "Jude",
+        "Kenzo",
+        "Yuki",
+        "Godwig"
+      ],
+      "events": [
+        "• Primera exploración de la cueva oculta de los acantilados.",
+        "• Descubrimiento de un antiguo campamento perteneciente a William.",
+        "• Recuperación de una caja protegida del agua.",
+        "• Hallazgo de la segunda carta de William.",
+        "• Obtención de nuevas coordenadas para futuras expediciones.",
+        "• Incorporación de Transilvania al Atlas de William."
+      ],
+      "notes": "• William permaneció en la cueva durante un periodo indeterminado.\n• La carta menciona un castillo conocido como Vârful Umbrei.\n• No existe una ubicación exacta para dicho castillo.\n• Los rumores hablan de luces, escaleras cambiantes y figuras en los tejados.\n• William consideró la historia lo suficientemente importante como para abandonar Irlanda y continuar hacia Europa Oriental.\n• El símbolo hallado en la cueva coincide con el encontrado en la Torre del Viajero."
+    }
+  ],
+  "routes": [
+    {
+      "id": "ruta1",
+      "name": "Viaje a la Torre y Blackroot",
+      "color": "#c76b2a",
+      "stops": [
+        "hogwarts",
+        "blackroot",
+        "irlanda",
+        "cueva_de_william_1781450680754"
+      ]
+    },
+    {
+      "id": "ruta_1781450838398",
+      "name": "Nueva Ruta",
+      "color": "#b8860b",
+      "stops": [
+        "hogwarts",
+        "torre"
+      ]
+    }
+  ],
+  "expeditions": [
+    {
+      "number": "I",
+      "title": "Investigando los Rumores I",
+      "emoji": "📚",
+      "members": [
+        {
+          "name": "Jude Bellingham",
+          "url": "https://hpc.forumcommunity.net/?t=63456048"
+        },
+        {
+          "name": "Yuki Cho",
+          "url": "https://hpc.forumcommunity.net/?t=63455116"
+        },
+        {
+          "name": "Godwig DeMettrie",
+          "url": "https://hpc.forumcommunity.net/?t=63454715"
+        }
+      ],
+      "summary": "La Orden se reunió en la biblioteca para comentar los rumores que azotaban Hogwarts en su primer año, relativos a la bibliotecaria. Se pusieron en común teorías que habían escuchado y presenciado.",
+      "conclusion": "Tras deliberar, los miembros del grupo llegaron a una idea conjunta sobre la naturaleza de la bibliotecaria."
+    },
+    {
+      "number": "II",
+      "title": "Investigando los Rumores II",
+      "emoji": "🔍",
+      "members": [
+        {
+          "name": "Jude Bellingham",
+          "url": "https://hpc.forumcommunity.net/?t=63456048"
+        },
+        {
+          "name": "Yuki Cho",
+          "url": "https://hpc.forumcommunity.net/?t=63455116"
+        },
+        {
+          "name": "Godwig DeMettrie",
+          "url": "https://hpc.forumcommunity.net/?t=63454715"
+        }
+      ],
+      "summary": "Tras la primera sesión, la Orden alcanzó un acuerdo: la bibliotecaria era algún tipo de híbrido. Recurrieron a la Biblioteca de Hogwarts para buscar información sobre criaturas de esa naturaleza.",
+      "conclusion": "Investigación bibliográfica completada. Las conclusiones reforzaron la teoría del híbrido."
+    },
+    {
+      "number": "III",
+      "title": "Preparativos para el Peligro",
+      "emoji": "⚔️",
+      "members": [
+        {
+          "name": "Jude Bellingham",
+          "url": "https://hpc.forumcommunity.net/?t=63456048"
+        },
+        {
+          "name": "Yuki Cho",
+          "url": "https://hpc.forumcommunity.net/?t=63455116"
+        },
+        {
+          "name": "Kenzo Kylaeris",
+          "url": "https://hpc.forumcommunity.net/?t=63455995"
+        },
+        {
+          "name": "Godwig DeMettrie",
+          "url": "https://hpc.forumcommunity.net/?t=63454715"
+        }
+      ],
+      "summary": "La Orden al completo se reunió para tratar cómo prepararse ante el peligro que se les avecinaba, provocado por la larga conversación mantenida previamente con Riya Kapoor.",
+      "conclusion": "Se establecieron planes de preparación y se acordaron medidas de precaución para los miembros de la Orden."
+    },
+    {
+      "number": "IV",
+      "title": "Sigilo de Alto Nivel...",
+      "emoji": "🙈",
+      "members": [
+        {
+          "name": "Jude Bellingham",
+          "url": "https://hpc.forumcommunity.net/?t=63456048"
+        },
+        {
+          "name": "Yuki Cho",
+          "url": "https://hpc.forumcommunity.net/?t=63455116"
+        },
+        {
+          "name": "Kenzo Kylaeris",
+          "url": "https://hpc.forumcommunity.net/?t=63455995"
+        },
+        {
+          "name": "Godwig DeMettrie",
+          "url": "https://hpc.forumcommunity.net/?t=63454715"
+        }
+      ],
+      "summary": "La Orden decidió entrenar el sigilo mediante un método poco convencional: El Escondite. Con este juego buscaban perfeccionar sus habilidades de ocultación de cara a la misión encomendada por la prefecta de Hufflepuff.",
+      "conclusion": "Entrenamiento de sigilo completado. Habilidades de ocultación mejoradas para la misión pendiente."
+    },
+    {
+      "number": "V",
+      "title": "Planes Futuros",
+      "emoji": "🌏",
+      "members": [
+        {
+          "name": "Jude Bellingham",
+          "url": "https://hpc.forumcommunity.net/?t=63456048"
+        },
+        {
+          "name": "Yuki Cho",
+          "url": "https://hpc.forumcommunity.net/?t=63455116"
+        },
+        {
+          "name": "Kenzo Kylaeris",
+          "url": "https://hpc.forumcommunity.net/?t=63455995"
+        },
+        {
+          "name": "Godwig DeMettrie",
+          "url": "https://hpc.forumcommunity.net/?t=63454715"
+        }
+      ],
+      "summary": "La Orden se reunió para debatir sobre sus planes a largo plazo y el rumbo que tomarían sus aventuras futuras.",
+      "conclusion": "Acuerdo unánime: el próximo gran viaje de la Orden será al pueblo de Kenzo, en Vietnam. Primer destino fuera de Europa confirmado."
+    },
+    {
+      "number": "VI",
+      "title": "Explorando Territorios",
+      "emoji": "🌲",
+      "members": [
+        {
+          "name": "Jude Bellingham",
+          "url": "https://hpc.forumcommunity.net/?t=63456048"
+        },
+        {
+          "name": "Yuki Cho",
+          "url": "https://hpc.forumcommunity.net/?t=63455116"
+        },
+        {
+          "name": "Kenzo Kylaeris",
+          "url": "https://hpc.forumcommunity.net/?t=63455995"
+        },
+        {
+          "name": "Godwig DeMettrie",
+          "url": "https://hpc.forumcommunity.net/?t=63454715"
+        }
+      ],
+      "summary": "La Orden visitó el orfanato de Godwig, en cuyas inmediaciones se adentraron en el bosque encantado de la zona. Durante la exploración descubrieron una torre y tomaron la decisión de entrar.",
+      "conclusion": "Descubrimiento de la torre misteriosa en el bosque. Inicio del arco de la Torre."
+    },
+    {
+      "number": "VII",
+      "title": "Sapos al Completo",
+      "emoji": "🐸",
+      "members": [
+        {
+          "name": "Jude Bellingham",
+          "url": "https://hpc.forumcommunity.net/?t=63456048"
+        },
+        {
+          "name": "Yuki Cho",
+          "url": "https://hpc.forumcommunity.net/?t=63455116"
+        },
+        {
+          "name": "Kenzo Kylaeris",
+          "url": "https://hpc.forumcommunity.net/?t=63455995"
+        },
+        {
+          "name": "Godwig DeMettrie",
+          "url": "https://hpc.forumcommunity.net/?t=63454715"
+        }
+      ],
+      "summary": "La Orden al completo se reunió para compartir y analizar las nuevas informaciones surgidas en torno a los mongrels y licántropos. Los miembros pusieron en común todo lo que sabían... hasta que escucharon algo que los puso los pelos de punta.",
+      "conclusion": "⚠️ Reunión interrumpida abruptamente. Los chicos tuvieron que abandonar corriendo ante un peligro imprevisto. La información compartida queda pendiente de procesar."
+    },
+    {
+      "number": "VIII",
+      "title": "Información y Deducción",
+      "emoji": "🩸",
+      "members": [
+        {
+          "name": "Jude Bellingham",
+          "url": "https://hpc.forumcommunity.net/?t=63456048"
+        },
+        {
+          "name": "Kenzo Kylaeris",
+          "url": "https://hpc.forumcommunity.net/?t=63455995"
+        },
+        {
+          "name": "Godwig DeMettrie",
+          "url": "https://hpc.forumcommunity.net/?t=63454715"
+        }
+      ],
+      "summary": "La Orden se reunió para analizar los sucesos recientes: el ataque sufrido por Jude a manos de un mongrel, una armadura agresiva contra Kenzo, y el ataque de carroñeros a Hogsmeade que presenció Godwig.",
+      "conclusion": "Los ataques no parecen casuales. La Orden empieza a considerar que algo o alguien está coordinando estos incidentes. La amenaza es real y está escalando."
+    },
+    {
+      "number": "IX",
+      "title": "Subiendo la Torre",
+      "emoji": "🗼",
+      "members": [
+        {
+          "name": "Jude Bellingham",
+          "url": "https://hpc.forumcommunity.net/?t=63456048"
+        },
+        {
+          "name": "Yuki Cho",
+          "url": "https://hpc.forumcommunity.net/?t=63455116"
+        },
+        {
+          "name": "Kenzo Kylaeris",
+          "url": "https://hpc.forumcommunity.net/?t=63455995"
+        },
+        {
+          "name": "Godwig DeMettrie",
+          "url": "https://hpc.forumcommunity.net/?t=63454715"
+        },
+        {
+          "name": "Li Xiang",
+          "url": "https://hpc.forumcommunity.net/?t=63458959"
+        }
+      ],
+      "summary": "La Orden se adentró en la torre misteriosa del bosque. Sorpresa inesperada: Li Xiang les había estado siguiendo y se unió al grupo. El ascenso fue complicado: unas escaleras viejas y rotas obligaron a los miembros a retroceder y replantear la subida.",
+      "conclusion": "Primera tentativa fallida de alcanzar la cima. Las escaleras son un obstáculo serio. Primera aparición de Li Xiang como acompañante de la Orden."
+    },
+    {
+      "number": "X",
+      "title": "En lo Más Alto de la Torre",
+      "emoji": "✨",
+      "members": [
+        {
+          "name": "Jude Bellingham",
+          "url": "https://hpc.forumcommunity.net/?t=63456048"
+        },
+        {
+          "name": "Yuki Cho",
+          "url": "https://hpc.forumcommunity.net/?t=63455116"
+        },
+        {
+          "name": "Kenzo Kylaeris",
+          "url": "https://hpc.forumcommunity.net/?t=63455995"
+        },
+        {
+          "name": "Godwig DeMettrie",
+          "url": "https://hpc.forumcommunity.net/?t=63454715"
+        },
+        {
+          "name": "Li Xiang",
+          "url": "https://hpc.forumcommunity.net/?t=63458959"
+        }
+      ],
+      "summary": "Gracias a la agilidad de Godwig, que subió primero y tendió una cuerda, todos los miembros lograron alcanzar la planta más alta de la torre. Allí encontraron algo oculto que apuntaba hacia un destino mucho más lejano que Londres.",
+      "conclusion": "🌟 Descubrimiento crucial en la planta superior. El legado de William encontrado. Nuevo destino confirmado: más allá de Londres. Inicio del arco principal del Atlas."
+    },
+    {
+      "number": "XI",
+      "title": "Mercado Blackroot (I)",
+      "emoji": "🏘️",
+      "members": [
+        {
+          "name": "Jude Bellingham",
+          "url": "https://hpc.forumcommunity.net/?t=63456048"
+        },
+        {
+          "name": "Yuki Cho",
+          "url": "https://hpc.forumcommunity.net/?t=63455116"
+        },
+        {
+          "name": "Kenzo Kylaeris",
+          "url": "https://hpc.forumcommunity.net/?t=63455995"
+        },
+        {
+          "name": "Godwig DeMettrie",
+          "url": "https://hpc.forumcommunity.net/?t=63454715"
+        }
+      ],
+      "summary": "Siguiendo las pistas hacia Hollimshill, Irlanda, la Orden caminó hasta dar con un pequeño poblado mágico: Blackroot. En su mercado encontraron objetos de interés y, sobre todo, una tienda con información relacionada con la carta hallada por Jude.",
+      "conclusion": "Primer contacto con Blackroot y su mercado mágico. Pista sobre William localizada en uno de los puestos del mercado."
+    },
+    {
+      "number": "XII",
+      "title": "Mercado Blackroot (II)",
+      "emoji": "🐉",
+      "members": [
+        {
+          "name": "Jude Bellingham",
+          "url": "https://hpc.forumcommunity.net/?t=63456048"
+        },
+        {
+          "name": "Yuki Cho",
+          "url": "https://hpc.forumcommunity.net/?t=63455116"
+        },
+        {
+          "name": "Kenzo Kylaeris",
+          "url": "https://hpc.forumcommunity.net/?t=63455995"
+        },
+        {
+          "name": "Godwig DeMettrie",
+          "url": "https://hpc.forumcommunity.net/?t=63454715"
+        }
+      ],
+      "summary": "La Orden comenzó a interrogar a los dependientes del mercado. Godwig estableció una buena relación con el vendedor de criaturas mágicas, quien les reveló información clave sobre William.",
+      "conclusion": "🔑 Revelación mayor: William está vivo. Vive en una cueva en los acantilados de la costa de Irlanda. Nuevo destino inmediato confirmado: los Acantilados de Irlanda."
+    },
+    {
+      "number": "XIII",
+      "emoji": "🌊",
+      "title": "Escalada en los acantilados",
+      "members": [
+        {
+          "name": "Jude Bellingham",
+          "url": "https://hpc.forumcommunity.net/?t=63456048"
+        },
+        {
+          "name": "Yuki Cho",
+          "url": "https://hpc.forumcommunity.net/?t=63455116"
+        },
+        {
+          "name": "Kenzo Kylaeris",
+          "url": "https://hpc.forumcommunity.net/?t=63455995"
+        },
+        {
+          "name": "Godwig DeMettrie",
+          "url": "https://hpc.forumcommunity.net/?t=63454715"
+        }
+      ],
+      "summary": "La Orden del Sapo Saltarín siguió las pistas obtenidas en Blackroot hasta la costa atlántica irlandesa. Tras explorar senderos costeros, antiguos caminos y diversas formaciones rocosas, lograron identificar una serie de marcas asociadas a William.\n\nLa investigación culminó con el descubrimiento de una entrada oculta entre los acantilados.",
+      "conclusion": "William realmente estuvo allí.\n\nLa entrada a una posible localización utilizada por el viajero fue localizada con éxito."
+    },
+    {
+      "number": "XIV",
+      "emoji": "🕳️",
+      "title": "Adentrándose en la Cueva",
+      "members": [
+        {
+          "name": "Jude Bellingham",
+          "url": "https://hpc.forumcommunity.net/?t=63456048"
+        },
+        {
+          "name": "Yuki Cho",
+          "url": "https://hpc.forumcommunity.net/?t=63455116"
+        },
+        {
+          "name": "Kenzo Kylaeris",
+          "url": "https://hpc.forumcommunity.net/?t=63455995"
+        },
+        {
+          "name": "Godwig DeMettrie",
+          "url": "https://hpc.forumcommunity.net/?t=63454715"
+        }
+      ],
+      "summary": "Los miembros de la Orden se adentraron en una cueva oculta bajo los acantilados irlandeses. En su interior encontraron pruebas inequívocas de la presencia de William: un antiguo campamento, diversos objetos abandonados y una caja metálica que contenía una nueva carta.\n\nLa nota apuntaba hacia un nuevo destino situado en Transilvania.",
+      "conclusion": "La ruta de William continúa hacia Europa continental.\n\nEl Castillo de Vârful Umbrei ha sido añadido al Atlas como nuevo objetivo de investigación."
+    }
+  ],
+  "archive": [
+    {
+      "id": "carta1",
+      "type": "CARTA",
+      "title": "Primera Carta de William",
+      "date": "Sin fechar — estimada c. 1888",
+      "width": 200,
+      "left": 40,
+      "top": 80,
+      "rotate": -2,
+      "preview": "\"Si encontráis esto, es porque el tiempo ha decidido que estáis listos...\"",
+      "locked": false,
+      "content": "Si encontráis esto, es porque el tiempo ha decidido que estáis listos para comprender lo que yo solo pude empezar.\n\nHe viajado durante cuarenta años por este mundo mágico que compartimos. He recogido sus secretos, sus criaturas, sus ruinas, sus voces olvidadas.\n\nNo soy un héroe. No soy un cazador. Soy, simplemente, alguien que no soportaba dejar las preguntas sin respuesta.\n\nEl mapa que encontráis junto a esta carta es incompleto. Lo es a propósito. Hay lugares que no se pueden poner en un mapa hasta que los hayas visto con tus propios ojos.\n\nSeguid las marcas. Confiad en los pájaros. Y nunca, jamás, aceptéis que algo es imposible solo porque nadie lo ha logrado antes.\n\n— William"
+    },
+    {
+      "id": "mapa1",
+      "type": "MAPA",
+      "title": "Mapa del Mundo Mágico",
+      "date": "Cartografía personal de William",
+      "width": 240,
+      "left": 270,
+      "top": 60,
+      "rotate": 1.5,
+      "preview": "Mapa parcialmente completo con marcas en tinta dorada y anotaciones al margen en tres idiomas.",
+      "locked": false,
+      "content": "NOTAS DEL MAPA — transcritas por Jude Bellingham\n\nEl mapa de William cubre todo el mundo conocido. Las marcas doradas indican lugares visitados. Las marcas rojas, lugares que planeaba visitar.\n\nMARCAS IDENTIFICADAS:\n· Acantilados del Oeste — marcado en rojo\n· \"P.R.\" — marcado pero con la página dañada\n· Una región oriental sin nombre — página arrancada\n· Hogwarts — marcado con una estrella dorada especial\n\nANOTACIONES AL MARGEN:\n· \"Las criaturas conocen los caminos que los mapas no muestran.\"\n· \"Busca siempre la segunda puerta.\"\n· Un símbolo repetido que no hemos podido identificar.\n\nEl mapa parece \"actualizarse\" ligeramente. Kenzo juró que una marca cambió de posición durante la noche."
+    },
+    {
+      "id": "nota1",
+      "type": "NOTA",
+      "title": "Nota sobre los Símbolos del Bosque",
+      "date": "Escrita por Jude — Noviembre 1971",
+      "width": 180,
+      "left": 530,
+      "top": 40,
+      "rotate": 3,
+      "preview": "Boceto de las marcas encontradas en los árboles del Bosque Prohibido.",
+      "locked": false,
+      "content": "NOTA DE CAMPO — Jude Bellingham\n\nLos símbolos en los árboles del Bosque Prohibido.\n\nSon seis en total. Los he copiado aquí lo mejor que pude:\n\n① Círculo con tres líneas cruzadas\n② Espiral doble\n③ Triángulo invertido con un punto en el centro\n④ Dos medias lunas enfrentadas\n⑤ Una forma que no reconozco — casi parece un sapo saltando\n⑥ Número romano que podría ser \"XIV\"\n\nWilliam los talló. Estoy segura. El estilo coincide con las marcas del margen del mapa.\n\n¿Qué significan? ¿Son un código? ¿Una ruta?\n\nYuki cree que son coordenadas de algún tipo. Godwig cree que marcan lugares peligrosos. Kenzo no ha dicho nada, lo cual significa que sabe algo."
+    },
+    {
+      "id": "reliquia1",
+      "type": "RELIQUIA",
+      "title": "La Brújula de Cobre",
+      "date": "Hallada en la Torre — Noviembre 1971",
+      "width": 160,
+      "left": 40,
+      "top": 300,
+      "rotate": -1.5,
+      "preview": "Brújula de cobre antiguo. La aguja no apunta al Norte.",
+      "locked": false,
+      "content": "FICHA DE RELIQUIA — catalogada por Kenzo Kylaeris\n\nOBJETO: Brújula de cobre, tamaño de palma\nESTADO: Excelente conservación\nPROCEDENCIA: Escritorio de William, Torre del Viajero\n\nDESCRIPCIÓN:\nLa aguja no apunta al Norte magnético. Oscila y se detiene señalando en distintas direcciones según la persona que la sostiene.\n\nOBSERVACIONES:\n· En manos de Jude: apunta aproximadamente al SO\n· En manos de Kenzo: apunta al N\n· En manos de Yuki: gira sin parar\n· En manos de Godwig: la aguja no se mueve en absoluto\n\nHIPÓTESIS:\n¿Señala hacia algo que esa persona necesita encontrar? ¿Hacia su \"verdad\"? ¿Hacia peligro?\n\nNota de Jude: \"Cuando la sostuve, sentí algo. Frío primero, luego calor. Como si la brújula me estuviera leyendo a mí.\"\n\nESTADO DE INVESTIGACIÓN: En curso"
+    },
+    {
+      "id": "misterio1",
+      "type": "DOCUMENTO",
+      "title": "??? — Páginas Arrancadas",
+      "date": "Desconocida",
+      "width": 180,
+      "left": 500,
+      "top": 280,
+      "rotate": -3,
+      "preview": "▓▓▓▓▓ — contenido no accesible — ▓▓▓▓▓",
+      "locked": true,
+      "content": "ACCESO RESTRINGIDO\n\nEste documento no ha sido descifrado todavía.\n\nLas páginas arrancadas del diario de William permanecen como un misterio.\n\n¿Qué no quería que encontráramos?"
+    },
+    {
+      "id": "carta2",
+      "type": "CARTA",
+      "title": "Carta de Mira Ashfen",
+      "date": "Noviembre, 1971",
+      "width": 195,
+      "left": 220,
+      "top": 320,
+      "rotate": 0.5,
+      "preview": "\"El hombre que buscáis pagó en monedas que nadie había visto antes...\"",
+      "locked": false,
+      "content": "A quien corresponda entre los jóvenes viajeros,\n\nHabéis venido preguntando por El Recogedor. Por William. No sé si queréis ayudarle o encontrar lo que él encontró. En cualquier caso, os merece la pena escuchar.\n\nVino a mi tienda tres veces. La primera buscaba recipientes para conservar pergaminos viejos. La segunda, cuerdas encantadas para escalar superficies mojadas. La tercera, y última, solo quería hablar.\n\nMe dijo que había encontrado \"algo que no debería existir\" en una cueva de la costa occidental. No quiso decir qué. Tenía los ojos de alguien que ha visto demasiado.\n\nPagó con monedas doradas con un símbolo que nunca he visto en ningún catálogo de galeones.\n\nNo volvió.\n\nSed cuidadosos, jóvenes.\n\n— Mira Ashfen\nBlackroot, Noviembre 1971"
+    },
+    {
+      "id": "doc_1781453278447",
+      "type": "CARTA",
+      "title": "Fragmento Conservado de la Cueva",
+      "date": "Aproximadamente 1968-1969  Cueva de los Acantilados de Irlanda",
+      "locked": false,
+      "preview": "\"La mayoría de las historias son falsas. Algunas exageradas. Pero de vez en cuando aparece una que nadie consigue explicar.\"",
+      "content": "Si estás leyendo esto, significa que el mar todavía no ha reclamado esta cueva.\n\nMe alegra comprobar que algunas cosas permanecen.\n\nLlevo meses siguiendo historias imposibles.\n\nLa mayoría resultan ser mentiras.\n\nAlgunas exageraciones.\n\nPero de vez en cuando aparece algo diferente.\n\nAlgo que no encaja.\n\nUna historia que sobrevive al paso del tiempo porque nadie ha conseguido explicarla.\n\nSon esas historias las que busco.\n\nNo porque crea que todas sean ciertas.\n\nSino porque incluso las falsas suelen ocultar algo interesante.\n\nDurante mi estancia en Irlanda escuché hablar de un castillo situado mucho más al este.\n\nUn lugar rodeado de supersticiones.\n\nLos habitantes de la zona hablan de luces en las ventanas cuando no debería haber nadie dentro.\n\nAlgunos afirman haber visto figuras caminando por los tejados durante las tormentas.\n\nOtros aseguran que las propias escaleras cambian de lugar.\n\nProbablemente no sea más que imaginación.\n\nPero llevo demasiado tiempo viajando como para ignorar historias que se repiten en demasiadas bocas distintas.\n\nMi siguiente destino será Transilvania.\n\nSi alguien continúa mis pasos, que recuerde algo:\n\nLos mapas muestran dónde están las cosas.\n\nPero rara vez explican por qué están allí.\n\n— William",
+      "left": 730,
+      "top": 40,
+      "width": 190,
+      "rotate": -0.7
+    },
+    {
+      "id": "doc_1781453792053",
+      "type": "MAPA",
+      "title": "Anotación sobre Vârful Umbrei",
+      "date": "Hallado junto a la Carta desde la Cueva Atlántica",
+      "locked": false,
+      "preview": "Un dibujo incompleto de los Cárpatos rodea una montaña marcada con tinta negra.",
+      "content": "Un fragmento de mapa extremadamente esquemático.\n\nEn él aparece una zona montañosa identificada únicamente como:\n\"Vârful Umbrei\"\nJunto al nombre hay varias anotaciones realizadas por William:\n\"Las historias coinciden demasiado.\"\n\"Las luces aparecen incluso cuando el castillo debería estar vacío.\"\n\"Buscar registros anteriores a la guerra.\"\n\"Posible conexión con antiguos linajes mágicos de la región.\"\nEl mapa no contiene una ubicación exacta.\nTan solo una referencia aproximada al centro de Transilvania.",
+      "left": 800,
+      "top": 180,
+      "width": 140,
+      "rotate": 15
+    }
+  ],
+  "characters": [
+    {
+      "name": "Jude Bellingham",
+      "emoji": "🧭",
+      "house": "Hufflepuff",
+      "role": "Observador · Archivista",
+      "origin": "Stourbridge, West Midlands",
+      "firstExpedition": "La Bibliotecaria (Expedición I)",
+      "lastExpedition": "Blackroot (Expedición III)",
+      "notes": "Siempre parece fijarse en cosas que los demás no ven. Fue el primero en reconocer los símbolos del mapa de William como un sistema coherente.",
+      "quote": "\"Las preguntas no resueltas son solo respuestas que todavía no hemos merecido.\""
+    },
+    {
+      "name": "Kenzo Kylaeris",
+      "emoji": "🏺",
+      "house": "Hufflepuff",
+      "role": "Expontaneo · Catálogo de Reliquias",
+      "origin": "Hoi An, Vietnam",
+      "firstExpedition": "La Bibliotecaria (Expedición I)",
+      "lastExpedition": "Blackroot (Expedición III)",
+      "notes": "Kenzo es una de esas personas que se nota que no están en este mundo. No tiene un ápice de respeto a nadie, ni sentido del miedo ante el peligro, cosa que es claramente mala para él. Con sus amigos se puede llegar a comportar, aunque el filtro lo tiene un poco atrofiado. No es mala persona, de hecho tira más hacia ser bueno, pero es un incordio con todas la de la ley",
+      "quote": "\"Si me callo es porque estoy debajo del agua y cuidado.\""
+    },
+    {
+      "name": "Yuki Chang",
+      "emoji": "🧪",
+      "house": "Hufflepuff",
+      "role": "Investigadora · Teorías",
+      "origin": "Tokio, Japón",
+      "firstExpedition": "La Bibliotecaria (Expedición I)",
+      "lastExpedition": "Blackroot (Expedición III)",
+      "notes": "Tranquila, observadora e intuitiva. Habla poco, dice lo justo. Dulce sin ser débil, firmeza silenciosa y humor sutil, casi invisible, que aparece en comentarios inesperados dichos con total serenidad.",
+      "quote": "\"Compradme pociones, las vendo baratas.\""
+    },
+    {
+      "name": "Godwig DeMettrie",
+      "emoji": "🐉",
+      "house": "Hufflepuff",
+      "role": "Soporte · Memoria",
+      "origin": "Dewsbury, Inglaterra",
+      "firstExpedition": "La Bibliotecaria (Expedición I)",
+      "lastExpedition": "Blackroot (Expedición III)",
+      "notes": "El va a lo suyo salvo que pueda llevarse algo a cambio. Aunque cuando se trata de sus amigos también el que se asegura de que nadie quede atrás. Las criaturas mágicas son su perdición. Haría lo que fuera por descubrir y amaestrar una.",
+      "quote": "\"Espera ¿Eso era un dragón? ¡Mola cantidubi! Ah no... solo era una salamandra\""
+    },
+    {
+      "name": "Li Xiang",
+      "emoji": "🎒",
+      "house": "Hufflepuff",
+      "role": "Almacen móvil - Inventor",
+      "origin": "Pingyao, China",
+      "firstExpedition": "Torre del Viajero (II)",
+      "lastExpedition": "Blackroot (III)",
+      "notes": "Desordenado, gracioso, de esos que siempre encuentran el momento menos adecuado para soltar un comentario que rompe la tensión. Amigable aunque de naturaleza torpe y algo descuidada. De él podrás esperar pergaminos chamuscados, ingredientes mal etiquetados o inventos que \"funcionan... casi\"",
+      "quote": "Creo que tengo una de esas en la mochila... o tenía."
+    }
+  ]
+}
