@@ -83,7 +83,7 @@
     justify-content: space-between;
     padding: 0 24px;
     position: relative;
-    z-index: 50;
+    z-index: 200;
     flex-shrink: 0;
     border-bottom: 3px solid var(--gold);
     box-shadow: 0 4px 20px rgba(0,0,0,0.6);
@@ -116,6 +116,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    pointer-events: none;
   }
 
   #title-center h1 {
@@ -140,6 +141,8 @@
     display: flex;
     gap: 4px;
     align-items: center;
+    position: relative;
+    z-index: 201;
   }
 
   .nav-tab {
@@ -2979,8 +2982,6 @@ window.addEventListener('load', () => {
   // Resetear botón de GitHub por si quedó bloqueado en el HTML exportado
   const ghBtn = document.getElementById('gh-push-btn');
   if (ghBtn) { ghBtn.disabled = false; ghBtn.textContent = '☁ Publicar ahora'; }
-  // Close any modal that may have been open when the HTML was exported
-  closeAllAdminModals();
   initMap();
 });
 </script>
@@ -3351,6 +3352,18 @@ Kenzo Kylaeris|https://hpc.forumcommunity.net/?t=63455995"></textarea>
 // ═══════════════════════════════════════════════════════
 //  ADMIN LOGIC
 // ═══════════════════════════════════════════════════════
+
+// Limpiar estado en vivo que pudo quedar grabado al exportar
+(function() {
+  // Cerrar todos los modales
+  document.querySelectorAll('.admin-modal-overlay').forEach(m => m.classList.remove('open'));
+  // Resetear botón de GitHub
+  const ghBtn = document.getElementById('gh-push-btn');
+  if (ghBtn) { ghBtn.disabled = false; ghBtn.textContent = '☁ Publicar ahora'; }
+  // Limpiar status de GitHub
+  const ghStatus = document.getElementById('gh-status');
+  if (ghStatus) { ghStatus.style.display = 'none'; ghStatus.innerHTML = ''; }
+})();
 
 function toggleAdmin() {
   if (!adminMode) {
@@ -4039,11 +4052,14 @@ function getCleanHTML() {
   html = html.replace(/let _ghTokenMemory = '.*?';/, "let _ghTokenMemory = '';");
 
   // Eliminar loaders duplicados de exports anteriores
+  html = html.replace(/<script type="application\/json" id="atlas-data">[\s\S]*?<\/script>\s*/g, '');
   html = html.replace(/<script>\s*\(async function\(\)\{[\s\S]*?data\.json[\s\S]*?\}\)\(\);\s*<\/script>\s*/g, '');
-  html = html.replace(/<script>\s*\(function\(\)\{[\s\S]*?atlas_william_data[\s\S]*?\}\)\(\);\s*<\/script>\s*/g, '');
+  html = html.replace(/<script>\s*\(function\(\)\{[\s\S]*?atlas-data[\s\S]*?\}\)\(\);\s*<\/script>\s*/g, '');
 
   return html;
 }
+
+function setGhStatus(msg, color) {
   const el = document.getElementById('gh-status');
   if (!el) return;
   el.style.display = 'block';
@@ -4068,16 +4084,23 @@ function openExportModal() {
 
 function downloadExportedHTML() {
   const data = buildDataJSON();
+  // Usar <script type="application/json"> para evitar que </script> en los datos
+  // rompa el parser HTML — el browser nunca ejecuta este tipo de script
+  const dataTag = `<script type="application/json" id="atlas-data">${data}<\/script>`;
   const loaderScript = `<script>
 (function(){
   try {
+    var el = document.getElementById('atlas-data');
+    if (!el) return;
     localStorage.removeItem('atlas_william_data');
-    localStorage.setItem('atlas_william_data', ${JSON.stringify(data)});
+    localStorage.setItem('atlas_william_data', el.textContent);
   } catch(e) {}
 })();
 <\/script>`;
   let out = getCleanHTML();
-  out = out.replace('</head>', loaderScript + '\n</head>');
+  // Eliminar data tags anteriores para no duplicar
+  out = out.replace(/<script type="application\/json" id="atlas-data">[\s\S]*?<\/script>/g, '');
+  out = out.replace('</head>', dataTag + '\n' + loaderScript + '\n</head>');
   const blob = new Blob([out], { type: 'text/html;charset=utf-8' });
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
