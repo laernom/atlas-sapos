@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1201,6 +1202,7 @@
     resize: vertical;
   }
 </style>
+<script>(async function(){try{var r=await fetch("data.json?t="+Date.now());if(!r.ok)return;var d=await r.json();localStorage.removeItem("atlas_william_data");localStorage.setItem("atlas_william_data",JSON.stringify(d));}catch(e){}})();</script>
 </head>
 <body class="">
 <div id="app">
@@ -1215,16 +1217,16 @@
     </div>
 
     <nav id="nav">
-      <button class="nav-tab active" onclick="showSection('map',this)">Mapa</button>
+      <button class="nav-tab" onclick="showSection('map',this)">Mapa</button>
       <button class="nav-tab" onclick="showSection('log',this)">Bitácora</button>
-      <button class="nav-tab" onclick="showSection('archive',this)">Archivo William</button>
+      <button class="nav-tab active" onclick="showSection('archive',this)">Archivo William</button>
       <button class="nav-tab" onclick="showSection('characters',this)">La Orden</button>
-      <button class="nav-tab admin-lock-btn unlocked" id="admin-btn" onclick="toggleAdmin()" title="Modo Administrador">🔓</button>
+      <button class="nav-tab admin-lock-btn" id="admin-btn" onclick="toggleAdmin()" title="Modo Administrador">🔒</button>
     </nav>
   </header>
 
   <!-- ─── ADMIN BAR ─── -->
-  <div id="admin-bar">
+  <div id="admin-bar" class="">
     <span class="admin-bar-label">⚙ Admin</span>
     <button class="admin-btn" onclick="openAdminNewLocation()">+ Localización</button>
     <button class="admin-btn" onclick="openAdminRouteEditor()">✦ Rutas</button>
@@ -1241,94 +1243,144 @@
   <main id="main">
 
     <!-- MAP -->
-    <div id="section-map" class="section active">
+    <div id="section-map" class="section">
       <div id="map-container">
         <div id="map" class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" style="position: relative;" tabindex="0"><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane" style="filter: sepia(0.85) saturate(0.5) brightness(0.82) contrast(1.1) hue-rotate(-8deg);"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 18; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" src="https://tile.openstreetmap.org/4/8/5.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(672px, 297px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/8/4.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(672px, 41px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/7/5.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(416px, 297px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/9/5.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(928px, 297px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/8/6.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(672px, 553px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/7/4.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(416px, 41px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/9/4.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(928px, 41px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/7/6.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(416px, 553px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/9/6.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(928px, 553px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/8/3.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(672px, -215px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/6/5.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(160px, 297px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/10/5.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1184px, 297px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/8/7.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(672px, 809px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/7/3.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(416px, -215px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/9/3.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(928px, -215px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/6/4.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(160px, 41px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/10/4.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1184px, 41px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/6/6.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(160px, 553px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/10/6.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1184px, 553px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/7/7.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(416px, 809px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/9/7.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(928px, 809px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/6/3.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(160px, -215px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/10/3.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1184px, -215px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/6/7.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(160px, 809px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/10/7.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1184px, 809px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/5/5.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-96px, 297px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/11/5.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1440px, 297px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/5/4.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-96px, 41px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/11/4.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1440px, 41px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/5/6.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-96px, 553px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/11/6.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1440px, 553px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/5/3.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-96px, -215px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/11/3.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1440px, -215px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/5/7.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-96px, 809px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/4/11/7.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1440px, 809px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-overlay-pane"><svg pointer-events="none" class="leaflet-zoom-animated" width="1886" height="1057" viewBox="-157 -88 1886 1057" style="transform: translate3d(-157px, -88px, 0px);"><g><path class="leaflet-interactive" stroke="#b8860b" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8, 5" fill="none" d="M622 266L614 305L614 318L616 325L620 331L625 334L632 335L644 333L650 330"></path><path class="leaflet-interactive" stroke="#1a0e06" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#b8860b" fill-opacity="0.9" fill-rule="evenodd" d="M613,325a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0 "></path><path class="leaflet-interactive" stroke="#b8860b" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8, 5" fill="none" d="M650 330L634 339L624 342L617 342L611 339L609 336L607 331L608 313L613 292L622 266"></path><path class="leaflet-interactive" stroke="#1a0e06" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#b8860b" fill-opacity="0.9" fill-rule="evenodd" d="M606,336a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0 "></path><path class="leaflet-interactive" stroke="#b8860b" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8, 5" fill="none" d="M622 266L607 256L597 252L589 252L581 257L576 268L575 276L576 314L580 335"></path><path class="leaflet-interactive" stroke="#1a0e06" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#b8860b" fill-opacity="0.9" fill-rule="evenodd" d="M577,259a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0 "></path></g></svg></div><div class="leaflet-pane leaflet-shadow-pane"></div><div class="leaflet-pane leaflet-marker-pane"><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(622px, 266px, 0px); z-index: 266;">
     <div class="marker-inner ">
-      <div class="marker-edit-badge">✥</div>
+      
       <div class="marker-icon">🏰</div>
       <div class="marker-label">Hogwarts</div>
     </div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(650px, 330px, 0px); z-index: 330;">
     <div class="marker-inner ">
-      <div class="marker-edit-badge">✥</div>
+      
       <div class="marker-icon">🗼</div>
       <div class="marker-label">Torre del Viajero</div>
     </div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(580px, 335px, 0px); z-index: 335;">
     <div class="marker-inner ">
-      <div class="marker-edit-badge">✥</div>
+      
       <div class="marker-icon">🏘️</div>
       <div class="marker-label">Blackroot</div>
     </div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(565px, 349px, 0px); z-index: 349;">
     <div class="marker-inner ">
-      <div class="marker-edit-badge">✥</div>
+      
       <div class="marker-icon">⛰️</div>
       <div class="marker-label">Acantilados de Irlanda</div>
     </div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(621px, 267px, 0px); z-index: 267;">
     <div class="marker-inner ">
-      <div class="marker-edit-badge">✥</div>
+      
       <div class="marker-icon">🌲</div>
       <div class="marker-label">Bosque Prohibido</div>
     </div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(695px, 432px, 0px); z-index: 432;">
     <div class="marker-inner marker-unknown">
-      <div class="marker-edit-badge">✥</div>
+      
       <div class="marker-icon">❓</div>
       <div class="marker-label">???</div>
     </div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(1002px, 553px, 0px); z-index: 553;">
     <div class="marker-inner marker-unknown">
-      <div class="marker-edit-badge">✥</div>
+      
       <div class="marker-icon">🔒</div>
       <div class="marker-label">???</div>
     </div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(857px, 228px, 0px); z-index: 321;">
     <div class="marker-inner ">
-      <div class="marker-edit-badge">✥</div>
+      
       <div class="marker-icon">📍</div>
       <div class="marker-label">Prueba</div>
     </div></div></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com" title="A JavaScript library for interactive maps"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" class="leaflet-attribution-flag"><path fill="#4C7BE1" d="M0 0h12v4H0z"></path><path fill="#FFD500" d="M0 4h12v3H0z"></path><path fill="#E0BC00" d="M0 7h12v1H0z"></path></svg> Leaflet</a> <span aria-hidden="true">|</span> © OpenStreetMap contributors</div></div></div><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane" style="filter: sepia(0.85) saturate(0.5) brightness(0.82) contrast(1.1) hue-rotate(-8deg);"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 17; transform: translate3d(-811px, -379px, 0px) scale(2);"></div><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 18; transform: translate3d(-811px, -379px, 0px) scale(1);"><img alt="" src="https://tile.openstreetmap.org/5/16/10.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1344px, 586px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/17/10.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1600px, 586px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/16/11.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1344px, 842px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/17/11.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1600px, 842px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/16/9.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1344px, 330px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/17/9.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1600px, 330px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/15/10.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1088px, 586px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/18/10.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1856px, 586px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/15/11.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1088px, 842px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/18/11.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1856px, 842px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/16/12.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1344px, 1098px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/17/12.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1600px, 1098px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/15/9.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1088px, 330px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/18/9.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1856px, 330px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/15/12.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1088px, 1098px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/18/12.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1856px, 1098px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/14/10.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(832px, 586px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/19/10.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(2112px, 586px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/14/11.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(832px, 842px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/19/11.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(2112px, 842px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/14/9.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(832px, 330px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/19/9.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(2112px, 330px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/14/12.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(832px, 1098px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/19/12.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(2112px, 1098px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/13/10.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(576px, 586px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/20/10.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(2368px, 586px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/13/11.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(576px, 842px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/20/11.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(2368px, 842px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/13/9.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(576px, 330px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/20/9.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(2368px, 330px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/13/12.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(576px, 1098px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/5/20/12.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(2368px, 1098px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-overlay-pane"><svg pointer-events="none" class="leaflet-zoom-animated" width="1886" height="1048" viewBox="-157 -87 1886 1048" style="transform: translate3d(-157px, -87px, 0px);"><g><path class="leaflet-interactive" stroke="#c76b2a" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8, 5" fill="none" d="M433 144L418 160L408 175L402 194L402 204L406 218L414 231L435 251"></path><path class="leaflet-interactive" stroke="#1a0e06" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#c76b2a" fill-opacity="0.9" fill-rule="evenodd" d="M399,201a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0 "></path><path class="leaflet-interactive" stroke="#c76b2a" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8, 5" fill="none" d="M435 251L423 224L411 202L394 176L379 160L369 155L360 154L352 158L344 166L336 179L333 187L318 241L309 302"></path><path class="leaflet-interactive" stroke="#1a0e06" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#c76b2a" fill-opacity="0.9" fill-rule="evenodd" d="M353,156a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0 "></path><path class="leaflet-interactive" stroke="#c76b2a" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8, 5" fill="none" d="M309 302L304 303L305 312"></path><path class="leaflet-interactive" stroke="#1a0e06" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#c76b2a" fill-opacity="0.9" fill-rule="evenodd" d="M301,304a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0 "></path><path class="leaflet-interactive" stroke="#b8860b" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8, 5" fill="none" d="M433 144L424 178L417 223L417 243L422 264L426 271L432 277L448 282L470 280L490 273"></path><path class="leaflet-interactive" stroke="#1a0e06" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#b8860b" fill-opacity="0.9" fill-rule="evenodd" d="M419,264a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0 "></path></g></svg></div><div class="leaflet-pane leaflet-shadow-pane"></div><div class="leaflet-pane leaflet-marker-pane"><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(433px, 144px, 0px); z-index: 144;">
     <div class="marker-inner ">
-      <div class="marker-edit-badge">✥</div>
+      
       <div class="marker-icon">🏰</div>
       <div class="marker-label">Hogwarts</div>
     </div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(490px, 273px, 0px); z-index: 273;">
     <div class="marker-inner ">
-      <div class="marker-edit-badge">✥</div>
+      
       <div class="marker-icon">🗼</div>
       <div class="marker-label">Torre del Viajero</div>
     </div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(435px, 251px, 0px); z-index: 251;">
     <div class="marker-inner ">
-      <div class="marker-edit-badge">✥</div>
+      
       <div class="marker-icon">🏘️</div>
       <div class="marker-label">Blackroot</div>
     </div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(309px, 302px, 0px); z-index: 302;">
     <div class="marker-inner ">
-      <div class="marker-edit-badge">✥</div>
+      
       <div class="marker-icon">⛰️</div>
       <div class="marker-label">Acantilados de Irlanda</div>
     </div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(431px, 146px, 0px); z-index: 146;">
     <div class="marker-inner ">
-      <div class="marker-edit-badge">✥</div>
+      
       <div class="marker-icon">🌲</div>
       <div class="marker-label">Bosque Prohibido</div>
     </div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(580px, 477px, 0px); z-index: 477;">
     <div class="marker-inner marker-unknown">
-      <div class="marker-edit-badge">✥</div>
+      
       <div class="marker-icon">❓</div>
       <div class="marker-label">???</div>
     </div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(1193px, 718px, 0px); z-index: 718;">
     <div class="marker-inner marker-unknown">
-      <div class="marker-edit-badge">✥</div>
+      
       <div class="marker-icon">🔒</div>
       <div class="marker-label">???</div>
     </div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(1119px, 597px, 0px); z-index: 597;">
     <div class="marker-inner marker-unknown">
-      <div class="marker-edit-badge">✥</div>
+      
       <div class="marker-icon">🏰</div>
       <div class="marker-label">???</div>
     </div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(305px, 312px, 0px); z-index: 312;">
     <div class="marker-inner ">
-      <div class="marker-edit-badge">✥</div>
+      
       <div class="marker-icon">🌊</div>
       <div class="marker-label">Cueva de William</div>
-    </div></div></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(4349px, 2789.5px, 0px) scale(16);"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com" title="A JavaScript library for interactive maps"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" class="leaflet-attribution-flag"><path fill="#4C7BE1" d="M0 0h12v4H0z"></path><path fill="#FFD500" d="M0 4h12v3H0z"></path><path fill="#E0BC00" d="M0 7h12v1H0z"></path></svg> Leaflet</a> <span aria-hidden="true">|</span> © OpenStreetMap contributors</div></div></div></div>
+    </div></div></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(4349px, 2789.5px, 0px) scale(16);"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com" title="A JavaScript library for interactive maps"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" class="leaflet-attribution-flag"><path fill="#4C7BE1" d="M0 0h12v4H0z"></path><path fill="#FFD500" d="M0 4h12v3H0z"></path><path fill="#E0BC00" d="M0 7h12v1H0z"></path></svg> Leaflet</a> <span aria-hidden="true">|</span> © OpenStreetMap contributors</div></div></div><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(10px, -811px, 0px);"><div class="leaflet-pane leaflet-tile-pane" style="filter: sepia(0.85) saturate(0.5) brightness(0.82) contrast(1.1) hue-rotate(-8deg);"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 17; transform: translate3d(-1695px, -2344px, 0px) scale(2);"></div><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 18; transform: translate3d(-759px, -1112px, 0px) scale(1);"><img alt="" src="https://tile.openstreetmap.org/10/498/342.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1320px, 2232px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/498/341.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1320px, 1976px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/497/342.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1064px, 2232px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/499/342.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1576px, 2232px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/498/343.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1320px, 2488px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/497/341.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1064px, 1976px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/499/341.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1576px, 1976px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/497/343.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1064px, 2488px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/499/343.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1576px, 2488px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/498/340.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1320px, 1720px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/496/342.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(808px, 2232px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/500/342.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1832px, 2232px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/498/344.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1320px, 2744px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/497/340.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1064px, 1720px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/499/340.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1576px, 1720px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/496/341.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(808px, 1976px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/500/341.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1832px, 1976px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/496/343.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(808px, 2488px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/500/343.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1832px, 2488px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/497/344.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1064px, 2744px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/499/344.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1576px, 2744px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/496/340.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(808px, 1720px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/500/340.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1832px, 1720px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/496/344.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(808px, 2744px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/500/344.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1832px, 2744px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/495/342.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(552px, 2232px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/501/342.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(2088px, 2232px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/495/341.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(552px, 1976px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/501/341.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(2088px, 1976px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/495/343.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(552px, 2488px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/501/343.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(2088px, 2488px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/495/340.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(552px, 1720px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/501/340.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(2088px, 1720px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/495/344.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(552px, 2744px, 0px); opacity: 1;"><img alt="" src="https://tile.openstreetmap.org/10/501/344.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(2088px, 2744px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-overlay-pane"><svg pointer-events="none" class="leaflet-zoom-animated" width="1896" height="1048" viewBox="-168 724 1896 1048" style="transform: translate3d(-168px, 724px, 0px);"><g><path class="leaflet-interactive" stroke="#c76b2a" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8, 5" fill="none" d="M0 0"></path><path class="leaflet-interactive" stroke="#1a0e06" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#c76b2a" fill-opacity="0.9" fill-rule="evenodd" d="M0 0"></path><path class="leaflet-interactive" stroke="#c76b2a" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8, 5" fill="none" d="M0 0"></path><path class="leaflet-interactive" stroke="#1a0e06" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#c76b2a" fill-opacity="0.9" fill-rule="evenodd" d="M0 0"></path><path class="leaflet-interactive" stroke="#c76b2a" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8, 5" fill="none" d="M0 0"></path><path class="leaflet-interactive" stroke="#1a0e06" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#c76b2a" fill-opacity="0.9" fill-rule="evenodd" d="M0 0"></path><path class="leaflet-interactive" stroke="#b8860b" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8, 5" fill="none" d="M0 0"></path><path class="leaflet-interactive" stroke="#1a0e06" stroke-opacity="1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#b8860b" fill-opacity="0.9" fill-rule="evenodd" d="M0 0"></path></g></svg></div><div class="leaflet-pane leaflet-shadow-pane"></div><div class="leaflet-pane leaflet-marker-pane"><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(941px, -6524px, 0px); z-index: -6524;">
+    <div class="marker-inner marker-visitado ">
+      
+      <div class="marker-icon">🏰</div>
+      <div class="marker-label">Hogwarts</div>
+    </div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(2761px, -2386px, 0px); z-index: -2386;">
+    <div class="marker-inner marker-visitado ">
+      
+      <div class="marker-icon">🗼</div>
+      <div class="marker-label">Torre del Viajero</div>
+    </div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(1025px, -3120px, 0px); z-index: -3120;">
+    <div class="marker-inner marker-visitado ">
+      
+      <div class="marker-icon">🏘️</div>
+      <div class="marker-label">Blackroot</div>
+    </div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(-3031px, -1464px, 0px); z-index: -1464;">
+    <div class="marker-inner marker-visitado ">
+      
+      <div class="marker-icon">⛰️</div>
+      <div class="marker-label">Acantilados de Irlanda</div>
+    </div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(868px, -6457px, 0px); z-index: -6457;">
+    <div class="marker-inner marker-visitado ">
+      
+      <div class="marker-icon">🌲</div>
+      <div class="marker-label">Bosque Prohibido</div>
+    </div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(5649px, 4128px, 0px); z-index: 4128;">
+    <div class="marker-inner marker-misterio marker-unknown">
+      
+      <div class="marker-icon">❓</div>
+      <div class="marker-label">???</div>
+    </div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(25262px, 11853px, 0px); z-index: 11853;">
+    <div class="marker-inner marker-misterio marker-unknown">
+      
+      <div class="marker-icon">🔒</div>
+      <div class="marker-label">???</div>
+    </div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(22881px, 7952px, 0px); z-index: 7952;">
+    <div class="marker-inner marker-misterio marker-unknown">
+      
+      <div class="marker-icon">🏰</div>
+      <div class="marker-label">???</div>
+    </div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(-3143px, -1168px, 0px); z-index: -1168;">
+    <div class="marker-inner marker-visitado ">
+      
+      <div class="marker-icon">🌊</div>
+      <div class="marker-label">Cueva de William</div>
+    </div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive leaflet-marker-draggable" tabindex="0" role="button" style="margin-left: -40px; margin-top: -46px; width: 80px; height: 50px; transform: translate3d(746px, 1136px, 0px); z-index: 1136;">
+    <div class="marker-inner marker-visitado ">
+      
+      <div class="marker-icon">📍</div>
+      <div class="marker-label">Ávalon</div>
+    </div></div></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(127707px, 87679.5px, 0px) scale(512);"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com" title="A JavaScript library for interactive maps"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" class="leaflet-attribution-flag"><path fill="#4C7BE1" d="M0 0h12v4H0z"></path><path fill="#FFD500" d="M0 4h12v3H0z"></path><path fill="#E0BC00" d="M0 7h12v1H0z"></path></svg> Leaflet</a> <span aria-hidden="true">|</span> © OpenStreetMap contributors</div></div></div></div>
 
         <!-- Compass SVG -->
         <svg id="compass" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -1361,14 +1413,35 @@
       </div>
 
       <!-- Location Panel -->
-      <div id="location-panel">
+      <div id="location-panel" class="">
         <div id="panel-header">
           <button id="panel-close" onclick="closePanel()">✕</button>
-          <span id="panel-icon">🗺️</span>
-          <div id="panel-title">—</div>
-          <div id="panel-region">—</div>
+          <span id="panel-icon">🗼</span>
+          <div id="panel-title">Torre del Viajero</div>
+          <div id="panel-region">Páramos de Yorkshire</div>
         </div>
-        <div id="panel-body"></div>
+        <div id="panel-body">
+    <div class="panel-section">
+      <span class="status-badge status-visitado">Visitado</span>
+    </div>
+    <div class="panel-section">
+      <div class="panel-section-title">Historia</div>
+      <p>Torre abandonada descubierta por la Orden durante una tormenta. En la sala superior, perfectamente conservada, encontraron el legado de William: sus mapas, su diario y la primera carta.</p>
+    </div>
+    <div class="panel-section">
+      <div class="panel-section-title">Miembros de la Orden</div>
+      <div class="panel-members"><span class="member-tag">Jude</span><span class="member-tag">Kenzo</span><span class="member-tag">Yuki</span><span class="member-tag">Godwig</span></div>
+    </div>
+    <div class="panel-section">
+      <div class="panel-section-title">Eventos Registrados</div>
+      <div class="event-item">Descubrimiento de la sala de William</div><div class="event-item">Hallazgo del Mapa del Mundo Mágico</div><div class="event-item">Primera carta de William encontrada</div><div class="event-item">Decisión de continuar los viajes</div>
+    </div>
+    
+    <div class="panel-section">
+      <div class="panel-section-title">Notas del Archivo</div>
+      <p style="font-style:italic">La sala no tenía polvo. Como si alguien la hubiera conservado con magia. En el escritorio había tinta fresca en la pluma.</p>
+    </div>
+  </div>
       </div>
     </div>
 
@@ -1568,24 +1641,141 @@ La nota apuntaba hacia un nuevo destino situado en Transilvania.</div>
 
 El Castillo de Vârful Umbrei ha sido añadido al Atlas como nuevo objetivo de investigación.</div>
       <button class="admin-card-btn" onclick="event.stopPropagation();openAdminExpEditor(13)">✏️ Editar</button>
+    </div>
+    <div class="expedition-card">
+      <div class="expedition-seal">📚</div>
+      <div class="expedition-number">Expedición XV</div>
+      <div class="expedition-title">Libros Polvorientos</div>
+      <div class="expedition-divider"></div>
+      <div class="expedition-label">Participantes</div>
+      <div class="panel-members" style="margin-bottom:10px"><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63456048" target="_blank" rel="noopener">Jude Bellingham</a><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63455116" target="_blank" rel="noopener">Yuki Cho</a><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63455995" target="_blank" rel="noopener">Kenzo Kylaeris</a><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63454715" target="_blank" rel="noopener">Godwig DeMettrie</a><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63458959" target="_blank" rel="noopener">Li Xiang</a></div>
+      <div class="expedition-label">Resumen</div>
+      <div class="expedition-text">Con el objetivo de preparar el futuro viaje a Transilvania, cada miembro de la Orden investigó un aspecto distinto de la región. Repartieron el trabajo entre historia, geografía, criaturas, castillos y leyendas para reunir una base de conocimientos antes de emprender el viaje.</div>
+      <div class="expedition-label">Conclusión</div>
+      <div class="expedition-text" style="font-style:italic">No basta con querer viajar. Antes de recorrer un lugar hay que entenderlo.</div>
+      <button class="admin-card-btn" onclick="event.stopPropagation();openAdminExpEditor(14)">✏️ Editar</button>
+    </div>
+    <div class="expedition-card">
+      <div class="expedition-seal">🏰</div>
+      <div class="expedition-number">Expedición XVI</div>
+      <div class="expedition-title">Castillos y Leyendas</div>
+      <div class="expedition-divider"></div>
+      <div class="expedition-label">Participantes</div>
+      <div class="panel-members" style="margin-bottom:10px"><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63456048" target="_blank" rel="noopener">Jude Bellingham</a><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63455116" target="_blank" rel="noopener">Yuki Cho</a><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63455995" target="_blank" rel="noopener">Kenzo Kylaeris</a><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63454715" target="_blank" rel="noopener">Godwig DeMettrie</a><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63458959" target="_blank" rel="noopener">Li Xiang</a></div>
+      <div class="expedition-label">Resumen</div>
+      <div class="expedition-text">Los Sapos compartieron toda la información recopilada durante sus investigaciones. Aunque muchas leyendas parecían exageradas, los castillos históricos y los mapas europeos reforzaron la idea de que Transilvania sería el siguiente gran destino de la agrupación.</div>
+      <div class="expedition-label">Conclusión</div>
+      <div class="expedition-text" style="font-style:italic">Aún no conocemos el camino exacto, pero sabemos hacia dónde debemos dirigirnos.</div>
+      <button class="admin-card-btn" onclick="event.stopPropagation();openAdminExpEditor(15)">✏️ Editar</button>
+    </div>
+    <div class="expedition-card">
+      <div class="expedition-seal">🐲</div>
+      <div class="expedition-number">Expedición XVII</div>
+      <div class="expedition-title">¿Por qué vendrían aquí?</div>
+      <div class="expedition-divider"></div>
+      <div class="expedition-label">Participantes</div>
+      <div class="panel-members" style="margin-bottom:10px"><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63456048" target="_blank" rel="noopener">Jude Bellingham</a><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63455116" target="_blank" rel="noopener">Yuki Cho</a><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63454715" target="_blank" rel="noopener">Godwig DeMettrie</a><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63458959" target="_blank" rel="noopener">Li Xiang</a></div>
+      <div class="expedition-label">Resumen</div>
+      <div class="expedition-text">Durante el Torneo de Ávalon, los Sapos comenzaron a investigar el origen del Cementerio de Dragones preguntando a los habitantes del pueblo. Descubrieron que nadie conocía realmente la verdad, pues cada persona relataba una versión distinta.</div>
+      <div class="expedition-label">Conclusión</div>
+      <div class="expedition-text" style="font-style:italic">Las historias cambian según quién las cuente. La verdad suele esconderse entre todas ellas.</div>
+      <button class="admin-card-btn" onclick="event.stopPropagation();openAdminExpEditor(16)">✏️ Editar</button>
+    </div>
+    <div class="expedition-card">
+      <div class="expedition-seal">🪦</div>
+      <div class="expedition-number">Expedición XVIII</div>
+      <div class="expedition-title">Dragones y Cementerios</div>
+      <div class="expedition-divider"></div>
+      <div class="expedition-label">Participantes</div>
+      <div class="panel-members" style="margin-bottom:10px"><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63456048" target="_blank" rel="noopener">Jude Bellingham</a><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63455116" target="_blank" rel="noopener">Yuki Cho</a><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63454715" target="_blank" rel="noopener">Godwig DeMettrie</a><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63458959" target="_blank" rel="noopener">Li Xiang</a></div>
+      <div class="expedition-label">Resumen</div>
+      <div class="expedition-text">El grupo exploró el Cementerio de Dragones sin alterar el entorno. Analizaron restos óseos, vegetación y estructuras antiguas intentando comprender por qué los dragones acudían allí a morir.</div>
+      <div class="expedition-label">Conclusión</div>
+      <div class="expedition-text" style="font-style:italic">Cuanto más observábamos, más claro quedaba que aquel lugar ocultaba un secreto mucho más antiguo que el propio torneo.</div>
+      <button class="admin-card-btn" onclick="event.stopPropagation();openAdminExpEditor(17)">✏️ Editar</button>
+    </div>
+    <div class="expedition-card">
+      <div class="expedition-seal">🛒</div>
+      <div class="expedition-number">Expedición XIX</div>
+      <div class="expedition-title">El carro olvidado</div>
+      <div class="expedition-divider"></div>
+      <div class="expedition-label">Participantes</div>
+      <div class="panel-members" style="margin-bottom:10px"><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63456048" target="_blank" rel="noopener">Jude Bellingham</a><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63455116" target="_blank" rel="noopener">Yuki Cho</a><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63454715" target="_blank" rel="noopener">Godwig DeMettrie</a></div>
+      <div class="expedition-label">Resumen</div>
+      <div class="expedition-text">En una excursión por el Bosque de Ávalon encontramos un viejo carro abandonado entre la maleza. Sin conocer su procedencia, decidimos inspeccionarlo y plantearnos si podría servirnos para futuras expediciones.</div>
+      <div class="expedition-label">Conclusión</div>
+      <div class="expedition-text" style="font-style:italic">A veces los mejores descubrimientos aparecen cuando uno deja de buscarlos.</div>
+      <button class="admin-card-btn" onclick="event.stopPropagation();openAdminExpEditor(18)">✏️ Editar</button>
+    </div>
+    <div class="expedition-card">
+      <div class="expedition-seal">⚔️</div>
+      <div class="expedition-number">Expedición XX</div>
+      <div class="expedition-title">El Carrosapo</div>
+      <div class="expedition-divider"></div>
+      <div class="expedition-label">Participantes</div>
+      <div class="panel-members" style="margin-bottom:10px"><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63456048" target="_blank" rel="noopener">Jude Bellingham</a><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63455116" target="_blank" rel="noopener">Yuki Cho</a><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63454715" target="_blank" rel="noopener">Godwig DeMettrie</a></div>
+      <div class="expedition-label">Resumen</div>
+      <div class="expedition-text">Reparamos el viejo carro utilizando magia y trabajo en equipo hasta convertirlo en nuestro propio vehículo de expedición. Nacía oficialmente el Carrosapo.</div>
+      <div class="expedition-label">Conclusión</div>
+      <div class="expedition-text" style="font-style:italic">Los grandes viajes también necesitan un hogar sobre ruedas.</div>
+      <button class="admin-card-btn" onclick="event.stopPropagation();openAdminExpEditor(19)">✏️ Editar</button>
+    </div>
+    <div class="expedition-card">
+      <div class="expedition-seal">🎨</div>
+      <div class="expedition-number">Expedición XXI</div>
+      <div class="expedition-title">Decoraciones en el Carrosapo</div>
+      <div class="expedition-divider"></div>
+      <div class="expedition-label">Participantes</div>
+      <div class="panel-members" style="margin-bottom:10px"><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63456048" target="_blank" rel="noopener">Jude Bellingham</a><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63455496" target="_blank" rel="noopener">Theodore Tonks</a><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63454715" target="_blank" rel="noopener">Godwig DeMettrie</a><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63458959" target="_blank" rel="noopener">Li Xiang</a></div>
+      <div class="expedition-label">Resumen</div>
+      <div class="expedition-text">El grupo regresó para terminar de acondicionar el interior del vehículo, organizando el espacio y añadiendo pequeños detalles que lo convertirían en un auténtico refugio para futuras aventuras.</div>
+      <div class="expedition-label">Conclusión</div>
+      <div class="expedition-text" style="font-style:italic">Un vehículo no solo sirve para viajar; también puede convertirse en parte de la historia de quienes lo utilizan.</div>
+      <button class="admin-card-btn" onclick="event.stopPropagation();openAdminExpEditor(20)">✏️ Editar</button>
+    </div>
+    <div class="expedition-card">
+      <div class="expedition-seal">🧳</div>
+      <div class="expedition-number">Expedición XXII</div>
+      <div class="expedition-title">Carrosapo a casa</div>
+      <div class="expedition-divider"></div>
+      <div class="expedition-label">Participantes</div>
+      <div class="panel-members" style="margin-bottom:10px"><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63456048" target="_blank" rel="noopener">Jude Bellingham</a><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63455116" target="_blank" rel="noopener">Yuki Chang</a><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63454715" target="_blank" rel="noopener">Godwig DeMettrie</a><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63458959" target="_blank" rel="noopener">Li Xiang</a><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63455074" target="_blank" rel="noopener">Daher Chang</a></div>
+      <div class="expedition-label">Resumen</div>
+      <div class="expedition-text">Con la estancia en Ávalon llegando a su fin, decidimos llevar el Carrosapo hasta Hogwarts utilizando al Abraxan de Godwig, asegurándonos de que el vehículo regresara con nosotros.</div>
+      <div class="expedition-label">Conclusión</div>
+      <div class="expedition-text" style="font-style:italic">Ávalon quedaba atrás, pero una parte de la isla viajaría con nosotros.</div>
+      <button class="admin-card-btn" onclick="event.stopPropagation();openAdminExpEditor(21)">✏️ Editar</button>
+    </div>
+    <div class="expedition-card">
+      <div class="expedition-seal">⚔️</div>
+      <div class="expedition-number">Expedición XXIII</div>
+      <div class="expedition-title">Entrenamientos finales</div>
+      <div class="expedition-divider"></div>
+      <div class="expedition-label">Participantes</div>
+      <div class="panel-members" style="margin-bottom:10px"><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63456048" target="_blank" rel="noopener">Jude Bellingham</a><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63455116" target="_blank" rel="noopener">Yuki Chang</a><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63454715" target="_blank" rel="noopener">Godwig DeMettrie</a><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63458959" target="_blank" rel="noopener">Li Xiang</a><a class="member-tag member-link" href="https://hpc.forumcommunity.net/?t=63455074" target="_blank" rel="noopener">Daher Chang</a></div>
+      <div class="expedition-label">Resumen</div>
+      <div class="expedition-text">Antes de afrontar la última prueba del torneo, practicamos distintos hechizos para estar preparados ante cualquier situación.</div>
+      <div class="expedition-label">Conclusión</div>
+      <div class="expedition-text" style="font-style:italic">La mejor preparación nunca garantiza el éxito, pero sí la tranquilidad de haber hecho todo lo posible.</div>
+      <button class="admin-card-btn" onclick="event.stopPropagation();openAdminExpEditor(22)">✏️ Editar</button>
     </div></div>
     </div>
 
     <!-- ARCHIVO WILLIAM -->
-    <div id="section-archive" class="section">
+    <div id="section-archive" class="section active">
       <div class="section-header">
         <h2>Archivo William</h2>
         <p>Reconstruyendo la vida del Viajero — cartas, mapas y reliquias halladas</p>
       </div>
-      <div id="archive-desk" style="height: 960px;">
+      <div id="archive-desk" style="height: 1080px;"><button class="admin-btn" onclick="openAdminNewArchiveItem()" style="position:absolute;top:10px;right:10px;z-index:10">+ Nuevo Documento</button>
     <div class="archive-item" style="
       left: 40px;
       top: 80px;
       width: 200px;
       transform: rotate(-2deg);
-    " onclick="openModal('carta1')">
+    " onclick="openAdminArchiveEditor(0)">
       <div class="archive-paper ">
-        
+        <div style="position:absolute;top:4px;right:4px;background:#ffcc44;color:#1a0e06;font-size:9px;padding:1px 5px;font-family:'Cinzel',serif;letter-spacing:1px">✏</div>
         <div class="archive-type">CARTA</div>
         <div class="archive-title">Primera Carta de William</div>
         <div class="archive-preview">"Si encontráis esto, es porque el tiempo ha decidido que estáis listos..."</div>
@@ -1597,9 +1787,9 @@ El Castillo de Vârful Umbrei ha sido añadido al Atlas como nuevo objetivo de i
       top: 60px;
       width: 240px;
       transform: rotate(1.5deg);
-    " onclick="openModal('mapa1')">
+    " onclick="openAdminArchiveEditor(1)">
       <div class="archive-paper ">
-        
+        <div style="position:absolute;top:4px;right:4px;background:#ffcc44;color:#1a0e06;font-size:9px;padding:1px 5px;font-family:'Cinzel',serif;letter-spacing:1px">✏</div>
         <div class="archive-type">MAPA</div>
         <div class="archive-title">Mapa del Mundo Mágico</div>
         <div class="archive-preview">Mapa parcialmente completo con marcas en tinta dorada y anotaciones al margen en tres idiomas.</div>
@@ -1611,9 +1801,9 @@ El Castillo de Vârful Umbrei ha sido añadido al Atlas como nuevo objetivo de i
       top: 40px;
       width: 180px;
       transform: rotate(3deg);
-    " onclick="openModal('nota1')">
+    " onclick="openAdminArchiveEditor(2)">
       <div class="archive-paper ">
-        
+        <div style="position:absolute;top:4px;right:4px;background:#ffcc44;color:#1a0e06;font-size:9px;padding:1px 5px;font-family:'Cinzel',serif;letter-spacing:1px">✏</div>
         <div class="archive-type">NOTA</div>
         <div class="archive-title">Nota sobre los Símbolos del Bosque</div>
         <div class="archive-preview">Boceto de las marcas encontradas en los árboles del Bosque Prohibido.</div>
@@ -1625,9 +1815,9 @@ El Castillo de Vârful Umbrei ha sido añadido al Atlas como nuevo objetivo de i
       top: 300px;
       width: 160px;
       transform: rotate(-1.5deg);
-    " onclick="openModal('reliquia1')">
+    " onclick="openAdminArchiveEditor(3)">
       <div class="archive-paper ">
-        
+        <div style="position:absolute;top:4px;right:4px;background:#ffcc44;color:#1a0e06;font-size:9px;padding:1px 5px;font-family:'Cinzel',serif;letter-spacing:1px">✏</div>
         <div class="archive-type">RELIQUIA</div>
         <div class="archive-title">La Brújula de Cobre</div>
         <div class="archive-preview">Brújula de cobre antiguo. La aguja no apunta al Norte.</div>
@@ -1639,9 +1829,9 @@ El Castillo de Vârful Umbrei ha sido añadido al Atlas como nuevo objetivo de i
       top: 280px;
       width: 180px;
       transform: rotate(-3deg);
-    " onclick="openModal('misterio1')">
+    " onclick="openAdminArchiveEditor(4)">
       <div class="archive-paper archive-locked">
-        
+        <div style="position:absolute;top:4px;right:4px;background:#ffcc44;color:#1a0e06;font-size:9px;padding:1px 5px;font-family:'Cinzel',serif;letter-spacing:1px">✏</div>
         <div class="archive-type">DOCUMENTO</div>
         <div class="archive-title">??? — Páginas Arrancadas</div>
         <div class="archive-preview">▓▓▓▓▓ — contenido no accesible — ▓▓▓▓▓</div>
@@ -1653,9 +1843,9 @@ El Castillo de Vârful Umbrei ha sido añadido al Atlas como nuevo objetivo de i
       top: 320px;
       width: 195px;
       transform: rotate(0.5deg);
-    " onclick="openModal('carta2')">
+    " onclick="openAdminArchiveEditor(5)">
       <div class="archive-paper ">
-        
+        <div style="position:absolute;top:4px;right:4px;background:#ffcc44;color:#1a0e06;font-size:9px;padding:1px 5px;font-family:'Cinzel',serif;letter-spacing:1px">✏</div>
         <div class="archive-type">CARTA</div>
         <div class="archive-title">Carta de Mira Ashfen</div>
         <div class="archive-preview">"El hombre que buscáis pagó en monedas que nadie había visto antes..."</div>
@@ -1667,9 +1857,9 @@ El Castillo de Vârful Umbrei ha sido añadido al Atlas como nuevo objetivo de i
       top: 40px;
       width: 190px;
       transform: rotate(-0.7deg);
-    " onclick="openModal('doc_1781453278447')">
+    " onclick="openAdminArchiveEditor(6)">
       <div class="archive-paper ">
-        
+        <div style="position:absolute;top:4px;right:4px;background:#ffcc44;color:#1a0e06;font-size:9px;padding:1px 5px;font-family:'Cinzel',serif;letter-spacing:1px">✏</div>
         <div class="archive-type">CARTA</div>
         <div class="archive-title">Fragmento Conservado de la Cueva</div>
         <div class="archive-preview">"La mayoría de las historias son falsas. Algunas exageradas. Pero de vez en cuando aparece una que nadie consigue explicar."</div>
@@ -1681,12 +1871,26 @@ El Castillo de Vârful Umbrei ha sido añadido al Atlas como nuevo objetivo de i
       top: 180px;
       width: 140px;
       transform: rotate(15deg);
-    " onclick="openModal('doc_1781453792053')">
+    " onclick="openAdminArchiveEditor(7)">
       <div class="archive-paper ">
-        
+        <div style="position:absolute;top:4px;right:4px;background:#ffcc44;color:#1a0e06;font-size:9px;padding:1px 5px;font-family:'Cinzel',serif;letter-spacing:1px">✏</div>
         <div class="archive-type">MAPA</div>
         <div class="archive-title">Anotación sobre Vârful Umbrei</div>
         <div class="archive-preview">Un dibujo incompleto de los Cárpatos rodea una montaña marcada con tinta negra.</div>
+      </div>
+    </div>
+  
+    <div class="archive-item" style="
+      left: 320px;
+      top: 180px;
+      width: 300px;
+      transform: rotate(2.1deg);
+    " onclick="openAdminArchiveEditor(8)">
+      <div class="archive-paper ">
+        <div style="position:absolute;top:4px;right:4px;background:#ffcc44;color:#1a0e06;font-size:9px;padding:1px 5px;font-family:'Cinzel',serif;letter-spacing:1px">✏</div>
+        <div class="archive-type">ANOTACIÓN</div>
+        <div class="archive-title">Pausa en la Investigación</div>
+        <div class="archive-preview">"Las pistas de William permanecerán donde están. Nosotros también debemos vivir nuestras propias aventuras."</div>
       </div>
     </div>
   </div>
@@ -1793,7 +1997,7 @@ El Castillo de Vârful Umbrei ha sido añadido al Atlas como nuevo objetivo de i
       Introduce la contraseña de la Orden para acceder al modo edición.
     </p>
     <input type="password" id="pwd-input" placeholder="· · · · · · · ·" onkeydown="if(event.key==='Enter')checkPassword()">
-    <div id="pwd-error"></div>
+    <div id="pwd-error">Contraseña incorrecta. Intenta de nuevo.</div>
     <div class="admin-modal-actions" style="justify-content:center">
       <button class="admin-btn" onclick="checkPassword()">Acceder</button>
       <button class="admin-btn danger" onclick="closeAllAdminModals()">Cancelar</button>
@@ -1806,7 +2010,7 @@ El Castillo de Vârful Umbrei ha sido añadido al Atlas como nuevo objetivo de i
   <div class="admin-modal">
     <button class="admin-close-btn" onclick="closeAllAdminModals()">✕</button>
     <h3 id="loc-modal-title">Nueva Localización</h3>
-    <input type="hidden" id="loc-edit-id">
+    <input type="hidden" id="loc-edit-id" value="">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
       <div class="admin-field">
         <label>Nombre</label>
@@ -1856,7 +2060,7 @@ Descubrimiento del mapa"></textarea>
     </div>
     <div class="admin-modal-actions">
       <button class="admin-btn" onclick="saveLocationEdit()">💾 Guardar</button>
-      <button class="admin-btn danger" id="loc-delete-btn" onclick="deleteLocation()" style="display:none">🗑 Eliminar</button>
+      <button class="admin-btn danger" id="loc-delete-btn" onclick="deleteLocation()" style="display: none;">🗑 Eliminar</button>
       <button class="admin-btn" onclick="closeAllAdminModals()">Cancelar</button>
     </div>
     <p style="font-family:'IM Fell English',serif;font-size:11px;color:rgba(255,204,68,0.4);font-style:italic;margin-top:12px">
@@ -1869,8 +2073,8 @@ Descubrimiento del mapa"></textarea>
 <div class="admin-modal-overlay" id="exp-modal">
   <div class="admin-modal">
     <button class="admin-close-btn" onclick="closeAllAdminModals()">✕</button>
-    <h3 id="exp-modal-title">Nueva Expedición</h3>
-    <input type="hidden" id="exp-edit-idx" value="-1">
+    <h3 id="exp-modal-title">Editar: Entrenamientos finales</h3>
+    <input type="hidden" id="exp-edit-idx" value="22">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
       <div class="admin-field">
         <label>Número (romano)</label>
@@ -1900,7 +2104,7 @@ Kenzo Kylaeris|https://hpc.forumcommunity.net/?t=63455995"></textarea>
     </div>
     <div class="admin-modal-actions">
       <button class="admin-btn" onclick="saveExpeditionEdit()">💾 Guardar</button>
-      <button class="admin-btn danger" id="exp-delete-btn" onclick="deleteExpedition()" style="display:none">🗑 Eliminar</button>
+      <button class="admin-btn danger" id="exp-delete-btn" onclick="deleteExpedition()" style="display: block;">🗑 Eliminar</button>
       <button class="admin-btn" onclick="closeAllAdminModals()">Cancelar</button>
     </div>
   </div>
@@ -1962,8 +2166,8 @@ Kenzo Kylaeris|https://hpc.forumcommunity.net/?t=63455995"></textarea>
 <div class="admin-modal-overlay" id="archive-edit-modal">
   <div class="admin-modal">
     <button class="admin-close-btn" onclick="closeAllAdminModals()">✕</button>
-    <h3 id="archive-modal-edit-title">Nuevo Documento</h3>
-    <input type="hidden" id="archive-edit-idx" value="-1">
+    <h3 id="archive-modal-edit-title">Editar: Pausa en la Investigación</h3>
+    <input type="hidden" id="archive-edit-idx" value="8">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
       <div class="admin-field">
         <label>Tipo (CARTA, MAPA, NOTA, RELIQUIA…)</label>
@@ -2011,7 +2215,7 @@ Kenzo Kylaeris|https://hpc.forumcommunity.net/?t=63455995"></textarea>
     </div>
     <div class="admin-modal-actions">
       <button class="admin-btn" onclick="saveArchiveEdit()">💾 Guardar</button>
-      <button class="admin-btn danger" id="arch-delete-btn" onclick="deleteArchiveItem()" style="display:none">🗑 Eliminar</button>
+      <button class="admin-btn danger" id="arch-delete-btn" onclick="deleteArchiveItem()" style="display: block;">🗑 Eliminar</button>
       <button class="admin-btn" onclick="closeAllAdminModals()">Cancelar</button>
     </div>
   </div>
@@ -2127,7 +2331,7 @@ Kenzo Kylaeris|https://hpc.forumcommunity.net/?t=63455995"></textarea>
       </p>
     </div>
 
-    <div id="gh-status" style="font-family: &quot;Crimson Text&quot;, serif; font-size: 13px; min-height: 20px; margin-bottom: 10px; padding: 8px 12px; background: rgba(0, 0, 0, 0.3); display: none; line-height: 1.5; color: rgb(136, 170, 255);">④ Generando HTML con tus datos...</div>
+    <div id="gh-status" style="font-family: &quot;Crimson Text&quot;, serif; font-size: 13px; min-height: 20px; margin-bottom: 10px; padding: 8px 12px; background: rgba(0, 0, 0, 0.3); display: block; line-height: 1.5; color: rgb(136, 170, 255);">④ Subiendo index.html...</div>
 
     <div class="admin-modal-actions">
       <button class="admin-btn" onclick="pushToGitHub()" id="gh-push-btn" disabled="">⏳ Publicando...</button>
@@ -3990,6 +4194,7 @@ document.querySelectorAll('.admin-modal-overlay').forEach(el => {
   el.addEventListener('click', e => { if (e.target === el) closeAllAdminModals(); });
 });
 </script>
-<div id="admin-toast"></div>
-</body>
-</html>
+<div id="admin-toast" class="">✦ Modo administrador activado</div>
+
+
+</body></html>
