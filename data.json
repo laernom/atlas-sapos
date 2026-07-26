@@ -179,6 +179,38 @@
         "• Incorporación de Transilvania al Atlas de William."
       ],
       "notes": "• William permaneció en la cueva durante un periodo indeterminado.\n• La carta menciona un castillo conocido como Vârful Umbrei.\n• No existe una ubicación exacta para dicho castillo.\n• Los rumores hablan de luces, escaleras cambiantes y figuras en los tejados.\n• William consideró la historia lo suficientemente importante como para abandonar Irlanda y continuar hacia Europa Oriental.\n• El símbolo hallado en la cueva coincide con el encontrado en la Torre del Viajero."
+    },
+    {
+      "id": "_valon_1785081297741",
+      "name": "Ávalon",
+      "icon": "📍",
+      "lat": 51.1656,
+      "lng": -4.6678,
+      "region": "Isla de Ávalon",
+      "status": "visitado",
+      "history": "La Orden del Sapo Saltarín llegó a Ávalon con motivo del célebre Torneo en honor a Merlín. Aunque el evento terminó viéndose envuelto por acontecimientos inesperados, los Sapos aprovecharon su estancia para recorrer la isla, investigar sus misterios y continuar fortaleciendo el espíritu aventurero que caracteriza a la agrupación.\n\nEntre sus descubrimientos destacan el antiguo Cementerio de Dragones, un viejo carro abandonado oculto en el bosque y los primeros pasos hacia la creación del que acabaría convirtiéndose en el Carrosapo, el vehículo con el que esperan recorrer el mundo mágico.",
+      "members": [
+        "Jude",
+        "Kenzo",
+        "Godwig",
+        "Yuki",
+        "Theodore",
+        "Daher",
+        "Cillian"
+      ],
+      "events": [
+        "Llegada a Ávalon durante el Torneo.",
+        "Investigación sobre el Cementerio de Dragones.",
+        "Participación en el Torneo de Ávalon",
+        "Recopilación de testimonios de los habitantes del pueblo.",
+        "Exploración del Bosque de Ávalon.",
+        "Hallazgo de un antiguo carro abandonado.",
+        "Reparación y transformación del carro en el Carrosapo.",
+        "Decoración y acondicionamiento del vehículo.",
+        "Traslado del Carrosapo hacia Hogwarts mediante el Abraxan de Godwig.",
+        "Entrenamientos previos al enfrentamiento con Morgana"
+      ],
+      "notes": "Se documentan numerosas teorías sobre el Cementerio de Dragones, aunque ninguna concluyente.\nSe añade el primer registro oficial del Carrosapo como vehículo de expedición de la Orden."
     }
   ],
   "routes": [
@@ -423,8 +455,8 @@
     },
     {
       "number": "X",
-      "title": "En lo Más Alto de la Torre",
       "emoji": "✨",
+      "title": "En lo Más Alto de la Torre",
       "members": [
         {
           "name": "Jude Bellingham",
@@ -549,6 +581,239 @@
       ],
       "summary": "Los miembros de la Orden se adentraron en una cueva oculta bajo los acantilados irlandeses. En su interior encontraron pruebas inequívocas de la presencia de William: un antiguo campamento, diversos objetos abandonados y una caja metálica que contenía una nueva carta.\n\nLa nota apuntaba hacia un nuevo destino situado en Transilvania.",
       "conclusion": "La ruta de William continúa hacia Europa continental.\n\nEl Castillo de Vârful Umbrei ha sido añadido al Atlas como nuevo objetivo de investigación."
+    },
+    {
+      "number": "XV",
+      "emoji": "📚",
+      "title": "Libros Polvorientos",
+      "members": [
+        {
+          "name": "Jude Bellingham",
+          "url": "https://hpc.forumcommunity.net/?t=63456048"
+        },
+        {
+          "name": "Yuki Cho",
+          "url": "https://hpc.forumcommunity.net/?t=63455116"
+        },
+        {
+          "name": "Kenzo Kylaeris",
+          "url": "https://hpc.forumcommunity.net/?t=63455995"
+        },
+        {
+          "name": "Godwig DeMettrie",
+          "url": "https://hpc.forumcommunity.net/?t=63454715"
+        },
+        {
+          "name": "Li Xiang",
+          "url": "https://hpc.forumcommunity.net/?t=63458959"
+        }
+      ],
+      "summary": "Con el objetivo de preparar el futuro viaje a Transilvania, cada miembro de la Orden investigó un aspecto distinto de la región. Repartieron el trabajo entre historia, geografía, criaturas, castillos y leyendas para reunir una base de conocimientos antes de emprender el viaje.",
+      "conclusion": "No basta con querer viajar. Antes de recorrer un lugar hay que entenderlo."
+    },
+    {
+      "number": "XVI",
+      "emoji": "🏰",
+      "title": "Castillos y Leyendas",
+      "members": [
+        {
+          "name": "Jude Bellingham",
+          "url": "https://hpc.forumcommunity.net/?t=63456048"
+        },
+        {
+          "name": "Yuki Cho",
+          "url": "https://hpc.forumcommunity.net/?t=63455116"
+        },
+        {
+          "name": "Kenzo Kylaeris",
+          "url": "https://hpc.forumcommunity.net/?t=63455995"
+        },
+        {
+          "name": "Godwig DeMettrie",
+          "url": "https://hpc.forumcommunity.net/?t=63454715"
+        },
+        {
+          "name": "Li Xiang",
+          "url": "https://hpc.forumcommunity.net/?t=63458959"
+        }
+      ],
+      "summary": "Los Sapos compartieron toda la información recopilada durante sus investigaciones. Aunque muchas leyendas parecían exageradas, los castillos históricos y los mapas europeos reforzaron la idea de que Transilvania sería el siguiente gran destino de la agrupación.",
+      "conclusion": "Aún no conocemos el camino exacto, pero sabemos hacia dónde debemos dirigirnos."
+    },
+    {
+      "number": "XVII",
+      "emoji": "🐲",
+      "title": "¿Por qué vendrían aquí?",
+      "members": [
+        {
+          "name": "Jude Bellingham",
+          "url": "https://hpc.forumcommunity.net/?t=63456048"
+        },
+        {
+          "name": "Yuki Cho",
+          "url": "https://hpc.forumcommunity.net/?t=63455116"
+        },
+        {
+          "name": "Godwig DeMettrie",
+          "url": "https://hpc.forumcommunity.net/?t=63454715"
+        },
+        {
+          "name": "Li Xiang",
+          "url": "https://hpc.forumcommunity.net/?t=63458959"
+        }
+      ],
+      "summary": "Durante el Torneo de Ávalon, los Sapos comenzaron a investigar el origen del Cementerio de Dragones preguntando a los habitantes del pueblo. Descubrieron que nadie conocía realmente la verdad, pues cada persona relataba una versión distinta.",
+      "conclusion": "Las historias cambian según quién las cuente. La verdad suele esconderse entre todas ellas."
+    },
+    {
+      "number": "XVIII",
+      "emoji": "🪦",
+      "title": "Dragones y Cementerios",
+      "members": [
+        {
+          "name": "Jude Bellingham",
+          "url": "https://hpc.forumcommunity.net/?t=63456048"
+        },
+        {
+          "name": "Yuki Cho",
+          "url": "https://hpc.forumcommunity.net/?t=63455116"
+        },
+        {
+          "name": "Godwig DeMettrie",
+          "url": "https://hpc.forumcommunity.net/?t=63454715"
+        },
+        {
+          "name": "Li Xiang",
+          "url": "https://hpc.forumcommunity.net/?t=63458959"
+        }
+      ],
+      "summary": "El grupo exploró el Cementerio de Dragones sin alterar el entorno. Analizaron restos óseos, vegetación y estructuras antiguas intentando comprender por qué los dragones acudían allí a morir.",
+      "conclusion": "Cuanto más observábamos, más claro quedaba que aquel lugar ocultaba un secreto mucho más antiguo que el propio torneo."
+    },
+    {
+      "number": "XIX",
+      "emoji": "🛒",
+      "title": "El carro olvidado",
+      "members": [
+        {
+          "name": "Jude Bellingham",
+          "url": "https://hpc.forumcommunity.net/?t=63456048"
+        },
+        {
+          "name": "Yuki Cho",
+          "url": "https://hpc.forumcommunity.net/?t=63455116"
+        },
+        {
+          "name": "Godwig DeMettrie",
+          "url": "https://hpc.forumcommunity.net/?t=63454715"
+        }
+      ],
+      "summary": "En una excursión por el Bosque de Ávalon encontramos un viejo carro abandonado entre la maleza. Sin conocer su procedencia, decidimos inspeccionarlo y plantearnos si podría servirnos para futuras expediciones.",
+      "conclusion": "A veces los mejores descubrimientos aparecen cuando uno deja de buscarlos."
+    },
+    {
+      "number": "XX",
+      "emoji": "⚔️",
+      "title": "El Carrosapo",
+      "members": [
+        {
+          "name": "Jude Bellingham",
+          "url": "https://hpc.forumcommunity.net/?t=63456048"
+        },
+        {
+          "name": "Yuki Cho",
+          "url": "https://hpc.forumcommunity.net/?t=63455116"
+        },
+        {
+          "name": "Godwig DeMettrie",
+          "url": "https://hpc.forumcommunity.net/?t=63454715"
+        }
+      ],
+      "summary": "Reparamos el viejo carro utilizando magia y trabajo en equipo hasta convertirlo en nuestro propio vehículo de expedición. Nacía oficialmente el Carrosapo.",
+      "conclusion": "Los grandes viajes también necesitan un hogar sobre ruedas."
+    },
+    {
+      "number": "XXI",
+      "emoji": "🎨",
+      "title": "Decoraciones en el Carrosapo",
+      "members": [
+        {
+          "name": "Jude Bellingham",
+          "url": "https://hpc.forumcommunity.net/?t=63456048"
+        },
+        {
+          "name": "Theodore Tonks",
+          "url": "https://hpc.forumcommunity.net/?t=63455496"
+        },
+        {
+          "name": "Godwig DeMettrie",
+          "url": "https://hpc.forumcommunity.net/?t=63454715"
+        },
+        {
+          "name": "Li Xiang",
+          "url": "https://hpc.forumcommunity.net/?t=63458959"
+        }
+      ],
+      "summary": "El grupo regresó para terminar de acondicionar el interior del vehículo, organizando el espacio y añadiendo pequeños detalles que lo convertirían en un auténtico refugio para futuras aventuras.",
+      "conclusion": "Un vehículo no solo sirve para viajar; también puede convertirse en parte de la historia de quienes lo utilizan."
+    },
+    {
+      "number": "XXII",
+      "emoji": "🧳",
+      "title": "Carrosapo a casa",
+      "members": [
+        {
+          "name": "Jude Bellingham",
+          "url": "https://hpc.forumcommunity.net/?t=63456048"
+        },
+        {
+          "name": "Yuki Chang",
+          "url": "https://hpc.forumcommunity.net/?t=63455116"
+        },
+        {
+          "name": "Godwig DeMettrie",
+          "url": "https://hpc.forumcommunity.net/?t=63454715"
+        },
+        {
+          "name": "Li Xiang",
+          "url": "https://hpc.forumcommunity.net/?t=63458959"
+        },
+        {
+          "name": "Daher Chang",
+          "url": "https://hpc.forumcommunity.net/?t=63455074"
+        }
+      ],
+      "summary": "Con la estancia en Ávalon llegando a su fin, decidimos llevar el Carrosapo hasta Hogwarts utilizando al Abraxan de Godwig, asegurándonos de que el vehículo regresara con nosotros.",
+      "conclusion": "Ávalon quedaba atrás, pero una parte de la isla viajaría con nosotros."
+    },
+    {
+      "number": "XXIII",
+      "emoji": "⚔️",
+      "title": "Entrenamientos finales",
+      "members": [
+        {
+          "name": "Jude Bellingham",
+          "url": "https://hpc.forumcommunity.net/?t=63456048"
+        },
+        {
+          "name": "Yuki Chang",
+          "url": "https://hpc.forumcommunity.net/?t=63455116"
+        },
+        {
+          "name": "Godwig DeMettrie",
+          "url": "https://hpc.forumcommunity.net/?t=63454715"
+        },
+        {
+          "name": "Li Xiang",
+          "url": "https://hpc.forumcommunity.net/?t=63458959"
+        },
+        {
+          "name": "Daher Chang",
+          "url": "https://hpc.forumcommunity.net/?t=63455074"
+        }
+      ],
+      "summary": "Antes de afrontar la última prueba del torneo, practicamos distintos hechizos para estar preparados ante cualquier situación.",
+      "conclusion": "La mejor preparación nunca garantiza el éxito, pero sí la tranquilidad de haber hecho todo lo posible."
     }
   ],
   "archive": [
@@ -655,6 +920,19 @@
       "top": 180,
       "width": 140,
       "rotate": 15
+    },
+    {
+      "id": "doc_1785082216819",
+      "type": "ANOTACIÓN",
+      "title": "Pausa en la Investigación",
+      "date": "Ávalon",
+      "locked": false,
+      "preview": "\"Las pistas de William permanecerán donde están. Nosotros también debemos vivir nuestras propias aventuras.\"",
+      "content": "Durante nuestra estancia en Ávalon decidimos interrumpir temporalmente la investigación sobre William para centrarnos en explorar la isla y participar en el Torneo. Aunque no encontramos nuevas pistas relacionadas con él, el viaje nos permitió comprender que nuestro Atlas no solo debe recoger sus pasos, sino también los nuestros.\n\nEl Carrosapo nació aquí.\n\nY, con él, una nueva forma de viajar.",
+      "left": 320,
+      "top": 180,
+      "width": 300,
+      "rotate": 2.1
     }
   ],
   "characters": [
