@@ -144,16 +144,20 @@
       "lat": 44.9181,
       "lng": 25.73,
       "region": "Montañas de Transilvania",
-      "status": "misterio",
-      "history": "Situado supuestamente en algún lugar de las montañas de Transilvania, el Castillo de Vârful Umbrei es la siguiente parada conocida en la ruta de William. La información disponible es extremadamente escasa y procede principalmente de rumores recogidos por el propio viajero.\n\nAlgunos testimonios describen luces apareciendo en ventanas abandonadas. Otros afirman que la distribución interior cambia de una visita a otra. Ninguna fuente coincide por completo con otra.\n\nPor el momento, la existencia del castillo sigue sin estar confirmada.",
+      "status": "visitado",
+      "history": "Tras meses de preparación, la Orden del Sapo Saltarín emprendió su primera gran expedición internacional hacia Transilvania siguiendo las pistas dejadas por William. En el interior del Castillo de Vârful Umbrei descubrieron que todo había sido una trampa preparada por Maxime, una semi-vampira que llevaba más de treinta años encerrada y que había engañado al propio William y a su antiguo grupo de exploradores. Durante el enfrentamiento, los Sapos descubrieron cartas escritas por William antes de la muerte de sus compañeros, comprendiendo que el mapa y el sueño del gremio de exploradores habían nacido mucho antes que ellos. Tras derrotar definitivamente a Maxime, Jude recibió una nota y una poción dorada dejadas por William, heredando el conocimiento de una antigua técnica de Desmaterialización, el primer legado directo del explorador hacia los Sapos.",
       "members": [],
       "events": [
-        "Eventos",
-        "• Referenciado por primera vez en la segunda carta de William.",
-        "• Incorporado al Atlas de la Orden del Sapo Saltarín.",
-        "• Considerado próximo objetivo de exploración."
+        "Llegada al Castillo de Vârful Umbrei.",
+        "Aparición de Maxime, la semi-vampira.",
+        "Descubrimiento de que William había estado allí décadas atrás.",
+        "Hallazgo de cartas pertenecientes al antiguo grupo de William.",
+        "Confirmación de que el grupo original fue traicionado por Maxime.",
+        "Derrota definitiva de Maxime.",
+        "Jude encuentra el mapa de William y recibe una nota junto a una poción dorada.",
+        "Obtención del conocimiento de la Desmaterialización."
       ],
-      "notes": "Notas del Archivo\n\n• Ubicación exacta desconocida.\n• Posible localización en Transilvania.\n• William abandonó Irlanda para investigar este lugar.\n• Ningún miembro de la Orden ha visitado todavía el castillo.\n• Estado actual: Investigación pendiente."
+      "notes": "Primera confirmación de que William viajaba acompañado por un grupo de exploradores.\n\nDescubrimiento del nombre Maxime como responsable de la muerte de sus compañeros.\n\nWilliam soñaba con completar un mapa del mundo mágico y fundar un gremio de exploradores.\n\nEl mapa encontrado en el castillo era una copia del mapa original de William.\n\nJude es reconocido implícitamente por William como un posible sucesor de su legado."
     },
     {
       "id": "cueva_de_william_1781450680754",
@@ -211,6 +215,36 @@
         "Entrenamientos previos al enfrentamiento con Morgana"
       ],
       "notes": "Se documentan numerosas teorías sobre el Cementerio de Dragones, aunque ninguna concluyente.\nSe añade el primer registro oficial del Carrosapo como vehículo de expedición de la Orden."
+    },
+    {
+      "id": "_noruega__1786792710071",
+      "name": "¿Noruega?",
+      "icon": "📍",
+      "lat": 61.7731,
+      "lng": 10.0195,
+      "region": "Noruega",
+      "status": "misterio",
+      "history": "Citado en una de las notas de William y también por Maxime. Donde todo empezó... para William.",
+      "members": [],
+      "events": [
+        "· Citado por primera vez en Vârful Umbrei"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "casa_de_kenzo_1786792800321",
+      "name": "Casa de Kenzo",
+      "icon": "📍",
+      "lat": 11.6953,
+      "lng": 108.2813,
+      "region": "Desconocido, Vietnam",
+      "status": "proximo",
+      "history": "Futura ubicación a visitar por los Sapos, el primer destino que se marcaron y el último para Kenzo.",
+      "members": [],
+      "events": [
+        "· Era el hogar de Kenzo, y el lugar donde descansarán sus cenizas."
+      ],
+      "notes": ""
     }
   ],
   "routes": [
@@ -814,6 +848,167 @@
       ],
       "summary": "Antes de afrontar la última prueba del torneo, practicamos distintos hechizos para estar preparados ante cualquier situación.",
       "conclusion": "La mejor preparación nunca garantiza el éxito, pero sí la tranquilidad de haber hecho todo lo posible."
+    },
+    {
+      "number": "XXIV",
+      "emoji": "👨‍👩‍👧‍👦",
+      "title": "El Consejo de los Saltarines",
+      "members": [
+        {
+          "name": "Jude Bellingham",
+          "url": "https://hpc.forumcommunity.net/?t=63456048"
+        },
+        {
+          "name": "Yuki Chang",
+          "url": "https://hpc.forumcommunity.net/?t=63455116"
+        },
+        {
+          "name": "Godwig DeMettrie",
+          "url": "https://hpc.forumcommunity.net/?t=63454715"
+        },
+        {
+          "name": "Li Xiang",
+          "url": "https://hpc.forumcommunity.net/?t=63458959"
+        },
+        {
+          "name": "Daher Chang",
+          "url": "https://hpc.forumcommunity.net/?t=63455074"
+        },
+        {
+          "name": "Theodore Tonks",
+          "url": "https://hpc.forumcommunity.net/?t=63455496"
+        }
+      ],
+      "summary": "Presentamos oficialmente el proyecto de la Orden del Sapo Saltarín a Theodore Tonks y Daher Chang. Les mostramos el Carrosapo, hablamos sobre William, el Atlas y nuestra intención de recorrer el mundo mágico siguiendo nuestras propias rutas.",
+      "conclusion": "Un mapa siempre es más interesante cuando hay más personas dispuestas a recorrerlo."
+    },
+    {
+      "number": "XXV",
+      "emoji": "🛍️",
+      "title": "Suministros a bordo",
+      "members": [
+        {
+          "name": "Jude Bellingham",
+          "url": "https://hpc.forumcommunity.net/?t=63456048"
+        },
+        {
+          "name": "Yuki Chang",
+          "url": "https://hpc.forumcommunity.net/?t=63455116"
+        },
+        {
+          "name": "Godwig DeMettrie",
+          "url": "https://hpc.forumcommunity.net/?t=63454715"
+        },
+        {
+          "name": "Li Xiang",
+          "url": "https://hpc.forumcommunity.net/?t=63458959"
+        },
+        {
+          "name": "Daher Chang",
+          "url": "https://hpc.forumcommunity.net/?t=63455074"
+        },
+        {
+          "name": "Theodore Tonks",
+          "url": "https://hpc.forumcommunity.net/?t=63455496"
+        }
+      ],
+      "summary": "La Orden del Sapo Saltarín dedicó una jornada completa a preparar el Carrosapo para un viaje de larga distancia. Cada miembro aportó algo útil para la expedición: plantas decorativas, barriles de cerveza, un puesto ambulante, material de entrenamiento y suministros médicos y de supervivencia.",
+      "conclusion": "El Carrosapo dejó de ser un carro restaurado. Empezó a parecerse a un auténtico hogar sobre ruedas."
+    },
+    {
+      "number": "Mazmorra I",
+      "emoji": "🏰",
+      "title": "Castillo de Vârful Umbrei",
+      "members": [
+        {
+          "name": "Jude Bellingham",
+          "url": "https://hpc.forumcommunity.net/?t=63456048"
+        },
+        {
+          "name": "Kenzo Kylaeris",
+          "url": "https://hpc.forumcommunity.net/?t=63455995"
+        },
+        {
+          "name": "Yuki Chang",
+          "url": "https://hpc.forumcommunity.net/?t=63455116"
+        },
+        {
+          "name": "Godwig DeMettrie",
+          "url": "https://hpc.forumcommunity.net/?t=63454715"
+        },
+        {
+          "name": "Li Xiang",
+          "url": "https://hpc.forumcommunity.net/?t=63458959"
+        },
+        {
+          "name": "Daher Chang",
+          "url": "https://hpc.forumcommunity.net/?t=63455074"
+        },
+        {
+          "name": "Theodore Tonks",
+          "url": "https://hpc.forumcommunity.net/?t=63455496"
+        }
+      ],
+      "summary": "Viajamos por primera vez fuera del Reino Unido siguiendo las pistas de William hasta el Castillo de Vârful Umbrei, en Transilvania. Allí descubrimos que el castillo no ocultaba a William, sino a Maxime, una semi-vampira que había engañado y destruido al antiguo grupo de exploradores décadas atrás. Durante el enfrentamiento encontramos cartas escritas por William antes de la tragedia, comprendiendo que nuestro sueño de viajar y cartografiar el mundo era, en realidad, el mismo sueño que él había tenido muchos años antes. Tras derrotar a Maxime, Jude recibió una nota y una poción que contenían el conocimiento de la Desmaterialización, un legado que William decidió dejar para un futuro explorador digno.",
+      "conclusion": "No seguimos únicamente las huellas de William; seguimos las huellas de quienes soñaron antes que nosotros. En Transilvania comprendimos que el Atlas también está hecho de errores, pérdidas y decisiones difíciles. El viaje nos dejó cicatrices, pero también nos dio nuestro primer verdadero legado."
+    },
+    {
+      "number": "XXVII",
+      "emoji": "🚌",
+      "title": "Una silla vacia",
+      "members": [
+        {
+          "name": "Jude Bellingham",
+          "url": "https://hpc.forumcommunity.net/?t=63456048"
+        },
+        {
+          "name": "Kilvin Kvist",
+          "url": "https://hpc.forumcommunity.net/?t=63497099"
+        },
+        {
+          "name": "Yuki Chang",
+          "url": "https://hpc.forumcommunity.net/?t=63455116"
+        },
+        {
+          "name": "Godwig DeMettrie",
+          "url": "https://hpc.forumcommunity.net/?t=63454715"
+        },
+        {
+          "name": "Daher Chang",
+          "url": "https://hpc.forumcommunity.net/?t=63455074"
+        }
+      ],
+      "summary": "Nos reunimos en el Carrosapo por primera vez sin Kenzo. No hablamos de mapas ni de castillos, sino de él. Recordamos sus bromas, sus teorías imposibles y la forma en que siempre conseguía convertir cualquier viaje en una aventura. Por primera vez comprendimos que el Atlas también tendría que registrar a las personas que ya no podían seguir viajando con nosotros.",
+      "conclusion": "Kenzo ya no recorrerá el mundo con nosotros, pero el mundo seguirá teniendo un lugar para él en cada una de nuestras rutas."
+    },
+    {
+      "number": "XXVIII",
+      "emoji": "🌟",
+      "title": "El último destino de Kenzo",
+      "members": [
+        {
+          "name": "Jude Bellingham",
+          "url": "https://hpc.forumcommunity.net/?t=63456048"
+        },
+        {
+          "name": "Kilvin Kvist",
+          "url": "https://hpc.forumcommunity.net/?t=63497099"
+        },
+        {
+          "name": "Yuki Chang",
+          "url": "https://hpc.forumcommunity.net/?t=63455116"
+        },
+        {
+          "name": "Godwig DeMettrie",
+          "url": "https://hpc.forumcommunity.net/?t=63454715"
+        },
+        {
+          "name": "Daher Chang",
+          "url": "https://hpc.forumcommunity.net/?t=63455074"
+        }
+      ],
+      "summary": "Dedicamos una jornada a investigar Vietnam y a planificar un viaje que todavía no tiene fecha. No buscamos una pista de William ni una reliquia perdida. Buscamos el lugar donde Kenzo habría querido volver una última vez. Además, conocemos a Kilvin, un chico que ha llegado recientemente a Hogwarts y que puede ser una nueva incorporación para los Sapos.",
+      "conclusion": "Algunos viajes no se hacen para descubrir el mundo. Se hacen para despedirse de alguien que ayudó a descubrirlo."
     }
   ],
   "archive": [
@@ -933,6 +1128,58 @@
       "top": 180,
       "width": 300,
       "rotate": 2.1
+    },
+    {
+      "id": "doc_1786791903223",
+      "type": "ANOTACIÓN",
+      "title": "Estado del Carrosapo",
+      "date": "Hogwarts - Año VI",
+      "locked": false,
+      "preview": "Si William viajaba con mapas, nosotros viajaremos con un hogar.",
+      "content": "Tras regresar de Ávalon, el Carrosapo ha sido ocultado y acondicionado como vehículo principal de la Orden del Sapo Saltarín. Ya no se trata únicamente de un medio de transporte improvisado, sino de un espacio preparado para expediciones prolongadas: almacenamiento, descanso, entrenamiento, provisiones y un pequeño puesto ambulante para financiar futuros viajes.\n\nEl siguiente destino permanece inalterado.\n\nTransilvania.",
+      "left": 750,
+      "top": 350,
+      "width": 190,
+      "rotate": 2.1
+    },
+    {
+      "id": "doc_1786792141068",
+      "type": "CARTA",
+      "title": "Últimas palabras desde Vârful Umbrei",
+      "date": "Castillo de Vârful Umbrei, Transilvanía (Rumania)",
+      "locked": false,
+      "preview": "Maxime me engañó. Confié en ella.",
+      "content": "Maxime me engañó. Confié en ella. Su belleza fue lo que me cautivó. ¿Por qué alguien se fijaría en un joven aventurero como yo? Le conté mis deseos por completar el mapa y algún día formar el gremio... Ahora, antes de morir, dejo esto para quien la libere. Mátenla. Fue un error perdonarle la vida a esa mujer.",
+      "left": 1000,
+      "top": 80,
+      "width": 190,
+      "rotate": -2.9
+    },
+    {
+      "id": "doc_1786792235506",
+      "type": "FRAGMENTO DE MAPA",
+      "title": "Copia del mapa de William",
+      "date": "Vârful Umbrei, Transilvania (Rumania)",
+      "locked": false,
+      "preview": "Una copia incompleta del mapa que William utilizaba durante sus expediciones.",
+      "content": "El mapa encontrado en el castillo reproduce gran parte de las rutas conocidas de William y contiene anotaciones parciales sobre lugares aún no explorados por la Orden del Sapo Saltarín. Algunas marcas parecen haber sido añadidas poco antes de la tragedia ocurrida en el castillo.",
+      "left": 1050,
+      "top": 180,
+      "width": 190,
+      "rotate": -20
+    },
+    {
+      "id": "doc_1786792331943",
+      "type": "NOTA",
+      "title": "El primer legado",
+      "date": "Castillo de Vârful Umbrei, Transilvania (Rumanía)",
+      "locked": true,
+      "preview": "He conseguido esta habilidad... y creo que un digno sucesor merece obtener dicho conocimiento",
+      "content": "He conseguido esta habilidad... y creo que un digno sucesor merece obtener dicho conocimiento. El poder para desmaterializarse donde uno desee parece simple, pero requiere de mucha práctica.\n[Este documento queda asociado a Jude Bellingham, quien recibió la nota y la poción dorada al finalizar la expedición.]",
+      "left": 1080,
+      "top": 320,
+      "width": 190,
+      "rotate": -2.1
     }
   ],
   "characters": [
