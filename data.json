@@ -267,6 +267,15 @@
         "hogwarts",
         "torre"
       ]
+    },
+    {
+      "id": "ruta_1786792877595",
+      "name": "Nueva Ruta",
+      "color": "#1a3a5c",
+      "stops": [
+        "hogwarts",
+        "prueba_1781215334263"
+      ]
     }
   ],
   "expeditions": [
